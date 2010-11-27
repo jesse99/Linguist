@@ -1,24 +1,24 @@
-﻿* Single quote strings aren't highlighting in test.
-* May want to use a weak list to avoid doing a snapshot -> doc -> extension -> language search every time.
-* Replace IronPython with Linguist?
-* Create a README.
-* May want to add a shebang option to language files:
-	- would need to cache this information if it is found in a snapshot
-* Use reflection to init ms_elements.
-* Add more elements.
-* Add a reference to this to the language ref doc.
-* Probably want a default or base style.
-* Can we log somewhere if there are errors in the static Languages ctor?
-	- event log?
-* Compile the mondo regexen.
-* Review TODOs.
-* Probably want standard and user language files
+﻿* Probably want standard and user language files
+	- add the language files as resources
 	- look in user first
 	- on startup install missing standard files
 	- on startup overwrite old standard files
 	- don't overwrite styles file (or maybe have two of these?)
 * Changes to these files need to be live.
 	- be sure to log rehups
+* Compile the mondo regexen.
+* Review TODOs.
+* Create a README.
+* Add a reference to this to the language ref doc.
+
+* May want to use a weak list to avoid doing a snapshot -> doc -> extension -> language search every time.
+* Replace IronPython with Linguist?
+* May want to add a shebang option to language files:
+	- would need to cache this information if it is found in a snapshot
+* Use reflection to init ms_elements.
+* Add more elements?
+* Can we log somewhere if there are errors in the static Languages ctor?
+	- event log?
 * Add to the studio addins site?
 * Send email to freshmeat or somewhere?
 * Might want to add an optional global field to default style which would cause it to be applied to all

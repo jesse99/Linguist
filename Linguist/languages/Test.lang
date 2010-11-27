@@ -1,0 +1,20 @@
+# Coco Test Language
+# Linguist doesn't handle multi-line elements very well so we don't support vebatim strings
+# or nested comments.
+Language: test
+Globs: *.test
+
+Comment: // [^\r\n]* [\r\n]
+Keyword: \b(?: assert | else | elif | false | foreach | if | implies | include | in | let | network | param | pass | return | set | true)\b
+Keyword: \b(?: __DATE__ | __DEBUG__ | __FILE__ | __LINE__ | __TIME__)\b
+Number: (?<= \W) [\d_]+ \. \d+ (?: [eE] [\+-]? \d+)? [a-zA-Z]*
+Number: (?<= \W) 0x [0-9A-Fa-f_]+ (?= \W)
+Number: (?<= \W) 0b [0-1_]+ (?= \W)
+Number: (?<= \W) [\d_]+ (?= \W)
+String: " (?: [^"\r\n\\] | \\.)* "
+String: ' (?: [^'\r\n\\] | \\.)* '
+
+# These are functions not types, but we want to make them more visible than
+# methods normally are.
+Type: ^[0-9_]+ (?: \. [0-9_]+)? (?: s|m)? \s* : 
+Type: ^[a-zA-Z0-9_]+ \(\) \s* : 

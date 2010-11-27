@@ -1,0 +1,10 @@
+Language: patch
+Globs: diff *.patch *.diff
+
+Header3: ^Index: \ .*
+Header3: ^ =+ $
+Header3: ^ --- .*
+Header3: ^ \+\+\+ .*
+Header3: ^ @@ .*
+NewText: ^\+ .*
+OldText: ^- .*

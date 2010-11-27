@@ -1,0 +1,22 @@
+Language: asciidoc
+Globs: *.asciidoc
+
+Comment: ^// .* $
+Keyword: \b(?<!-)(?: asciidocToDo | TODO | FIXME | CHECK | TEST | XXX | ZZZ | DEPRECATED)(?!-)\b
+Header1: ^== [^=] .* $
+Header2: ^=== [^=]  .* $
+Header3: ^==== [^=]  .* $
+Header4: ^===== [^=]  .* $
+Markup: ^\. [a-zA-Z] .* $
+Markup: ^\[ \s* \w+ \s* , \s* \w+ \s* \]
+Markup: ^\[ \s* \w+ \s* \]
+Markup: ^(?: TIP: | IMPORTANT: | WARNING: | CAUTION:)
+Markup: ^\[\[ [^\]]+ \]\]
+Markup: << [^>]+ >>
+Markup: ^---- [^\-]
+Preprocess: (?: ifdef | ifndef | endif) :: .+? $
+String: \{ [^}\r\n]+? \}
+Emphasis: \x2a \w+ [^\x2a\r\n]* \x2a (?! \*)
+Italic: (?<! \\) _ [^_\r\n]+ _ (?! \\)
+Monospace: (?<! \+) \+ [^+\r\n]+ \+ (?! \+)
+Command: (?<! `) ` [^`\r\n]+ ` (?! `)

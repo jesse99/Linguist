@@ -1,0 +1,22 @@
+# See http://www.opengroup.org/onlinepubs/009695399/utilities/make.html and
+# http://www.gnu.org/software/make/manual/html_node/index.html. Note that these
+# don't define make files very precisely so it's probable that this file isn't
+# quite right.
+
+# May want a custom language for automake files.
+Language: makefile
+Globs: Makefile Makefile.am *.make *.mk
+
+Comment: \x23 [^\r\n]* [\r\n]
+Keyword: \b(?: (?<! -)define | ended | ifdef | ifndef | ifeq | ifneq | else | endif | include | sinclude | override | export | unexport | VPATH | vpath)\b
+Keyword: \b(?: DEFAULT | IGNORE | POSIX | PRECIOUS | SCCS_GET | SILENT | SUFFIXES)\b
+Keyword: \$\^ | \$@ | \$% | \$\? | \$< | \$\* | \$@D | \$%D | \$\?D | \$<D | \$\*D | \$@F | \$%F | \$\?F | \$<F | \$\*F
+Keyword: (?<= \$\() (?: abspath | addprefix | addsuffix | and | basename | call | dir | error | eval | filter-out | filter | findstring | firstword | flavor | foreach | if | info | join | lastword | notdir | or | origin | patsubst | realpath | shell | sort | strip | subst | suffix | value | warning | wildcard | wordlist | words | word)
+Number: (?<= \W) \d+ (?= \W)
+Target: ^ [-\w\.\(\)/\\$]+ \s* : (?! =)
+String: " (?: [^"\r\n\\] | \\. | \\\r | \\\n)* "
+String: ` (?: [^`\r\n\\] | \\. | \\\r | \\\n)* `
+String: ' (?: [^'\r\n\\] | \\. | \\\r | \\\n)* '
+
+
+

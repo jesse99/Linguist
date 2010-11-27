@@ -1,0 +1,90 @@
+Name: attribute
+ForeColor: DarkGreen
+PointSize: 14
+Bold: true
+
+Name: command
+ForeColor: Blue
+
+Name: comment
+ForeColor: Red
+Italic: true
+
+Name: default
+FontName: Consolas
+PointSize: 12
+
+Name: emphasis
+Bold: true
+
+Name: header1
+ForeColor: 131,13,253
+PointSize: 20
+
+Name: header2
+ForeColor: 131,13,253
+PointSize: 18
+
+Name: header3
+ForeColor: 131,13,253
+PointSize: 16
+
+Name: header4
+ForeColor: 131,13,253
+PointSize: 14
+
+Name: header5
+ForeColor: 131,13,253
+PointSize: 12
+
+Name: italic
+Italic: true
+
+Name: keyword
+ForeColor: Blue
+Bold: true
+
+Name: markup
+ForeColor: DarkGreen
+PointSize: 14
+Bold: true
+
+Name: monospace
+ForeColor: DimGray
+
+Name: method
+Bold: true
+
+Name: newtext
+ForeColor: 55,41,254
+
+Name: number
+ForeColor: Brown
+
+Name: oldtext
+ForeColor: 125,6,73
+
+Name: preprocess
+ForeColor: 131,13,253
+PointSize: 20
+
+Name: region
+ForeColor: 131,13,253
+PointSize: 20
+
+Name: shellvariable
+ForeColor: DarkGreen
+PointSize: 14
+Bold: true
+
+Name: string
+ForeColor: 181,47,67
+
+Name: target
+ForeColor: DarkGreen
+PointSize: 14
+Bold: true
+
+Name: type
+PointSize: 18
+Bold: true
