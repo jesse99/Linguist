@@ -15,28 +15,12 @@ namespace Linguist
 		{
 			if (ms_styles.Count == 0)
 			{
-				string path = Path.Combine(Constants.StandardPath, "Styles.field");
-				Log.WriteLine("Loading {0}", path);
+				string path = Path.Combine(Constants.CustomPath, "Styles.field");
+				if (File.Exists(path))
+					DoLoadStyles(path);
 
-				try
-				{
-					string contents = File.ReadAllText(path);
-					Field[] fields = FieldParser.Parse(contents);
-
-					for (int i = 0; i < fields.Length; ++i)
-					{
-						if (fields[i].Name == "Name")
-							DoProcessStyle(fields, i);
-					}
-
-					ms_default = FindStyle("default");
-				}
-				catch (Exception e)
-				{
-					Log.WriteLine(e.Message);
-				}
-
-				Log.WriteLine(string.Empty);
+				path = Path.Combine(Constants.StandardPath, "Styles.field");
+				DoLoadStyles(path);
 			}
 		}
 
@@ -57,6 +41,31 @@ namespace Linguist
 		}
 
 		#region Private Methods
+		private static void DoLoadStyles(string path)
+		{
+			Log.WriteLine("Loading {0}", path);
+
+			try
+			{
+				string contents = File.ReadAllText(path);
+				Field[] fields = FieldParser.Parse(contents);
+
+				for (int i = 0; i < fields.Length; ++i)
+				{
+					if (fields[i].Name == "Name")
+						DoProcessStyle(fields, i);
+				}
+
+				ms_default = FindStyle("default");
+			}
+			catch (Exception e)
+			{
+				Log.WriteLine(e.Message);
+			}
+
+			Log.WriteLine(string.Empty);
+		}
+
 		private static void DoProcessStyle(Field[] fields, int i)
 		{
 			try
@@ -75,7 +84,7 @@ namespace Linguist
 				if (!ms_styles.ContainsKey(name))
 					ms_styles.Add(name, style);
 				else
-					Log.WriteLine("The {0} style was already defined.", name);
+					Log.WriteLine("Ignoring style {0} (it was already defined).", name);
 			}
 			catch (Exception e)
 			{

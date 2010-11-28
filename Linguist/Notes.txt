@@ -1,5 +1,4 @@
 ﻿* Probably want standard and user language files
-	- if a lang file is in custom them only use that file
 	- don't overwrite styles file (or maybe have two of these?)
 	- add a readme
 * Changes to these files need to be live.

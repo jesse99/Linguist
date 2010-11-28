@@ -86,7 +86,6 @@
     <EmbeddedResource Include="languages\Shell.lang" />
     <EmbeddedResource Include="languages\Styles.field" />
     <EmbeddedResource Include="languages\Test.lang" />
-    <EmbeddedResource Include="languages\Todo.lang" />
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
     </None>
