@@ -1,5 +1,4 @@
-﻿* Compile the mondo regexen.
-* Uninstall the old version and install the new version.
+﻿* Uninstall the old version and install the new version.
 * Review TODOs.
 * Create a README
 * Add a reference to this to the language ref doc.

@@ -31,7 +31,7 @@ namespace Linguist
 				m_classifications.Add(entry.Value);
 			}
 
-			m_regex = new Regex(string.Join(" | ", regexen.ToArray()), RegexOptions.IgnorePatternWhitespace | RegexOptions.Multiline);
+			m_regex = new Regex(string.Join(" | ", regexen.ToArray()), RegexOptions.IgnorePatternWhitespace | RegexOptions.Multiline | RegexOptions.Compiled);
 		}
 
 		public string Name { get; private set; }
