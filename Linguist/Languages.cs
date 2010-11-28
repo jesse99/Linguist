@@ -39,24 +39,9 @@ namespace Linguist
 				ms_elements.Add("Target", registry.GetClassificationType("Linguist.target"));
 				ms_elements.Add("Type", registry.GetClassificationType("Linguist.type"));
 
-				string dir = Constants.StandardPath;
-				foreach (string path in Directory.GetFiles(dir, "*.lang", SearchOption.TopDirectoryOnly))
-				{
-					try
-					{
-						Log.WriteLine("Loading {0}", path);
-						Log.Indent();
-						DoLoadLanguage(path);
-					}
-					catch (Exception e)
-					{
-						Log.WriteLine(e.Message);
-					}
-					finally
-					{
-						Log.Unndent();
-					}
-				}
+				var files = new List<string>();
+				DoLoadLanguages(files, Constants.CustomPath);
+				DoLoadLanguages(files, Constants.StandardPath);
 			}
 		}
 
@@ -72,6 +57,36 @@ namespace Linguist
 		}
 
 		#region Private Methods
+		private static void DoLoadLanguages(List<string> files, string dir)
+		{
+			foreach (string path in Directory.GetFiles(dir, "*.lang", SearchOption.TopDirectoryOnly))
+			{
+				try
+				{
+					string file = Path.GetFileName(path);
+					if (!files.Contains(file))
+					{
+						Log.WriteLine("Loading {0}", path);
+						Log.Indent();
+						files.Add(file);
+						DoLoadLanguage(path);
+					}
+					else
+					{
+						Log.WriteLine("Ignoring {0} (there is a custom version)", path);
+					}
+				}
+				catch (Exception e)
+				{
+					Log.WriteLine(e.Message);
+				}
+				finally
+				{
+					Log.Unndent();
+				}
+			}
+		}
+
 		private static void DoLoadLanguage(string path)
 		{
 			string contents = File.ReadAllText(path);
