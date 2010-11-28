@@ -1,9 +1,7 @@
-﻿* Changes to these files need to be live.
-	- be sure to log rehups
+﻿* Compile the mondo regexen.
 * Uninstall the old version and install the new version.
-* Compile the mondo regexen.
 * Review TODOs.
-* Create a README.
+* Create a README
 * Add a reference to this to the language ref doc.
 
 * May want to use a weak list to avoid doing a snapshot -> doc -> extension -> language search every time
@@ -21,6 +19,11 @@
   text documents (not just the ones with a matching language).
 * Would be nice to get multi-line elements (like C-style comments) working:
 	- doesn't seem possible to get the entire text 
+	- usually get called with spans consisting of one line
+* Would be really nice to have the styles.field file be live:
+	- styles are handled by the format classes which are instantiated by the editor
+	- saving these into a list when they are created and updating them later had no effect
+	- so seems that we would have to somehow tell the editor that the formats have changed
 	
 
 "C:\\Users\\jjones\\AppData\\Local"

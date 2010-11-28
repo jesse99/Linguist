@@ -40,8 +40,8 @@ namespace Linguist
 			return spans;
 		}
 
-		// This is called by Studio if a user action could change text classification. Classifiers
-		// can use this to update their internal state.
+		// Classifiers can invoke this to notify the editor of changes in classifications.
+		// Not sure how this works in practice...
 		public event EventHandler<ClassificationChangedEventArgs> ClassificationChanged;
 
 		#region Fields

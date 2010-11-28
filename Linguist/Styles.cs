@@ -21,6 +21,8 @@ namespace Linguist
 
 				path = Path.Combine(Constants.StandardPath, "Styles.field");
 				DoLoadStyles(path);
+
+				ms_default = FindStyle("default");
 			}
 		}
 
@@ -55,8 +57,6 @@ namespace Linguist
 					if (fields[i].Name == "Name")
 						DoProcessStyle(fields, i);
 				}
-
-				ms_default = FindStyle("default");
 			}
 			catch (Exception e)
 			{

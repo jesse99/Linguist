@@ -39,24 +39,47 @@ namespace Linguist
 				ms_elements.Add("Target", registry.GetClassificationType("Linguist.target"));
 				ms_elements.Add("Type", registry.GetClassificationType("Linguist.type"));
 
-				var files = new List<string>();
-				DoLoadLanguages(files, Constants.CustomPath);
-				DoLoadLanguages(files, Constants.StandardPath);
+				DoLoad(null, null);
+
+				// This is very poorly documented, but:
+				// 1) We need to use NotifyFilters.FileName in order to get the Deleted event to fire.
+				// 2) Events are fired on a worker thread.
+				ms_watcher = new FileSystemWatcher(Constants.CustomPath, "*.lang");
+				ms_watcher.NotifyFilter = NotifyFilters.LastWrite | NotifyFilters.CreationTime | NotifyFilters.FileName;
+				ms_watcher.Changed += Languages.DoLoad;
+				ms_watcher.Created += Languages.DoLoad;
+				ms_watcher.Deleted += Languages.DoLoad;
+				ms_watcher.EnableRaisingEvents = true;
 			}
 		}
 
 		public static Language FindLanguage(string fileName)
 		{
-			foreach (Language candidate in ms_languages.Values)
+			lock (ms_mutex)
 			{
-				if (candidate.Glob.IsMatch(fileName))
-					return candidate;
+				foreach (Language candidate in ms_languages.Values)
+				{
+					if (candidate.Glob.IsMatch(fileName))
+						return candidate;
+				}
 			}
 
 			return null;
 		}
 
 		#region Private Methods
+		private static void DoLoad(object sender, FileSystemEventArgs e)
+		{
+			lock (ms_mutex)
+			{
+				ms_languages.Clear();
+
+				var files = new List<string>();
+				DoLoadLanguages(files, Constants.CustomPath);
+				DoLoadLanguages(files, Constants.StandardPath);
+			}
+		}
+
 		private static void DoLoadLanguages(List<string> files, string dir)
 		{
 			foreach (string path in Directory.GetFiles(dir, "*.lang", SearchOption.TopDirectoryOnly))
@@ -158,8 +181,10 @@ namespace Linguist
 		#endregion
 
 		#region Fields
-		private static Dictionary<string, Language> ms_languages = new Dictionary<string,Language>();	// glob to language
+		private static FileSystemWatcher ms_watcher;
 		private static Dictionary<string, IClassificationType> ms_elements = new Dictionary<string, IClassificationType>();
+		private static object ms_mutex = new object();
+			private static Dictionary<string, Language> ms_languages = new Dictionary<string, Language>();	// glob to language
 		#endregion
 	}
 }

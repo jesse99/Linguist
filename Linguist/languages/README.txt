@@ -28,6 +28,9 @@ Italic: true if the element should be in italic, and false otherwise.
 The default style is special and applies to all text within the document. Other elements override the styles listed in
 the default style. A styles.field file in the custom directory overrides styles within the standard directory.
 
+Changes to language files in the custom directory take effect while Studio is running (although you may have to scroll 
+a document to see them). Changes to the styles files require restarting studio.
+
 Problems and other information are logged to a C:\Users\<name>\AppData\Local\Linguist\Log.txt file.
 
 jesjones@mindspring.com
