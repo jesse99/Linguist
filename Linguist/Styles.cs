@@ -15,7 +15,7 @@ namespace Linguist
 		{
 			if (ms_styles.Count == 0)
 			{
-				string path = Path.Combine(Constants.LinguistPath, "Styles.field");
+				string path = Path.Combine(Constants.StandardPath, "Styles.field");
 				Log.WriteLine("Loading {0}", path);
 
 				try

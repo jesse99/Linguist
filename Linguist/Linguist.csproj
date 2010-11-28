@@ -65,6 +65,7 @@
     <Compile Include="Constants.cs" />
     <Compile Include="FieldParser.cs" />
     <Compile Include="Definitions.cs" />
+    <Compile Include="InstallFiles.cs" />
     <Compile Include="Language.cs" />
     <Compile Include="Languages.cs" />
     <Compile Include="Linguist.cs" />
@@ -75,6 +76,17 @@
     <Compile Include="Styles.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="languages\Asciidoc.lang" />
+    <EmbeddedResource Include="languages\C#.lang" />
+    <EmbeddedResource Include="languages\C++.lang" />
+    <EmbeddedResource Include="languages\Field.lang" />
+    <EmbeddedResource Include="languages\Makefile.lang" />
+    <EmbeddedResource Include="languages\Patch.lang" />
+    <EmbeddedResource Include="languages\Peg.lang" />
+    <EmbeddedResource Include="languages\Shell.lang" />
+    <EmbeddedResource Include="languages\Styles.field" />
+    <EmbeddedResource Include="languages\Test.lang" />
+    <EmbeddedResource Include="languages\Todo.lang" />
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
     </None>

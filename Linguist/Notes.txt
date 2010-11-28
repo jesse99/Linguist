@@ -1,11 +1,9 @@
 ﻿* Probably want standard and user language files
-	- add the language files as resources
 	- look in user first
-	- on startup install missing standard files
-	- on startup overwrite old standard files
 	- don't overwrite styles file (or maybe have two of these?)
 * Changes to these files need to be live.
 	- be sure to log rehups
+* Uninstall the old version and install the new version.
 * Compile the mondo regexen.
 * Review TODOs.
 * Create a README.
@@ -28,3 +26,12 @@
 	
 
 "C:\\Users\\jjones\\AppData\\Local"
+
+names will be Linguist.languages.Asciidoc.lang
+
+ Assembly assem = this.GetType().Assembly;
+
+      // Load the resource using a namespace
+      // Will load resource named "ResourcesApp.Azul.jpg"
+      Stream stream =
+        assem.GetManifestResourceStream(this.GetType(), "Azul.jpg");

@@ -17,6 +17,7 @@ namespace Linguist
 	{
 		internal Linguist(IClassificationTypeRegistryService registry)
 		{
+			InstallFiles.Install();
 			Styles.Init();
 			Languages.Init(registry);
 		}

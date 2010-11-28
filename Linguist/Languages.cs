@@ -39,7 +39,7 @@ namespace Linguist
 				ms_elements.Add("Target", registry.GetClassificationType("Linguist.target"));
 				ms_elements.Add("Type", registry.GetClassificationType("Linguist.type"));
 
-				string dir = Constants.LinguistPath;
+				string dir = Constants.StandardPath;
 				foreach (string path in Directory.GetFiles(dir, "*.lang", SearchOption.TopDirectoryOnly))
 				{
 					try

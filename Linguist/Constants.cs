@@ -12,5 +12,21 @@ namespace Linguist
 				return System.IO.Path.Combine(dir, "Linguist");
 			}
 		}
+
+		public static string StandardPath
+		{
+			get
+			{
+				return System.IO.Path.Combine(LinguistPath, "standard");
+			}
+		}
+
+		public static string CustomPath
+		{
+			get
+			{
+				return System.IO.Path.Combine(LinguistPath, "custom");
+			}
+		}
 	}
 }
