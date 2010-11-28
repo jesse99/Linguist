@@ -1,6 +1,0 @@
-Language: todo
-Globs: TODO TODO.txt NOTES NOTES.txt
-
-Keyword: ^ \x2a
-Keyword: ^ \s* -
-
