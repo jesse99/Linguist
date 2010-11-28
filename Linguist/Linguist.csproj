@@ -91,6 +91,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="languages\README.txt" />
     <Content Include="Notes.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

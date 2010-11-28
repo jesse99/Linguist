@@ -1,7 +1,4 @@
-﻿* Probably want standard and user language files
-	- don't overwrite styles file (or maybe have two of these?)
-	- add a readme
-* Changes to these files need to be live.
+﻿* Changes to these files need to be live.
 	- be sure to log rehups
 * Uninstall the old version and install the new version.
 * Compile the mondo regexen.
@@ -9,7 +6,8 @@
 * Create a README.
 * Add a reference to this to the language ref doc.
 
-* May want to use a weak list to avoid doing a snapshot -> doc -> extension -> language search every time.
+* May want to use a weak list to avoid doing a snapshot -> doc -> extension -> language search every time
+	- make sure that this cache is reset on rehup
 * Replace IronPython with Linguist?
 * May want to add a shebang option to language files:
 	- would need to cache this information if it is found in a snapshot
@@ -26,3 +24,4 @@
 	
 
 "C:\\Users\\jjones\\AppData\\Local"
+C:\Users\<name>\AppData\Local\Linguist\Log.txt
