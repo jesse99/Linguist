@@ -124,7 +124,8 @@ namespace Linguist
 				Language lang;
 				if (!ms_languages.TryGetValue(glob, out lang))
 				{
-					string pattern = Regex.Escape(glob).Replace(@"\*", ".*").Replace(@"\?", ".");
+					string pattern = string.Format("^{0}$", Regex.Escape(glob));
+					pattern = pattern.Replace(@"\*", ".*").Replace(@"\?", ".");
 					var re = new Regex(pattern, RegexOptions.IgnoreCase);
 					ms_languages.Add(glob, new Language(name, re, elements));
 				}
