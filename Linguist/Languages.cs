@@ -26,6 +26,7 @@ namespace Linguist
 				ms_elements.Add("Header5", registry.GetClassificationType("Linguist.header5"));
 				ms_elements.Add("Italic", registry.GetClassificationType("Linguist.italic"));
 				ms_elements.Add("Keyword", registry.GetClassificationType("Linguist.keyword"));
+				ms_elements.Add("Keyword2", registry.GetClassificationType("Linguist.keyword2"));
 				ms_elements.Add("Markup", registry.GetClassificationType("Linguist.markup"));
 				ms_elements.Add("Method", registry.GetClassificationType("Linguist.method"));
 				ms_elements.Add("Monospace", registry.GetClassificationType("Linguist.monospace"));
@@ -38,6 +39,7 @@ namespace Linguist
 				ms_elements.Add("String", registry.GetClassificationType("Linguist.string"));
 				ms_elements.Add("Target", registry.GetClassificationType("Linguist.target"));
 				ms_elements.Add("Type", registry.GetClassificationType("Linguist.type"));
+				ms_elements.Add("Type2", registry.GetClassificationType("Linguist.type2"));
 
 				DoLoad(null, null);
 

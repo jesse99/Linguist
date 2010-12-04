@@ -271,6 +271,25 @@ namespace Linguist
 
 		// ----------------------------------------------------------------
 		[Export]
+		[Name("Linguist.keyword2")]
+		[BaseDefinition("Linguist")]
+		internal static ClassificationTypeDefinition Keyword2Definition = null;
+
+		[Export(typeof(EditorFormatDefinition))]
+		[ClassificationType(ClassificationTypeNames = "Linguist.keyword2")]
+		[Name("Linguist.keyword2")]
+		[UserVisible(true)]
+		[Order(After = Priority.High)]
+		internal sealed class Keyword2Format : BaseFormat
+		{
+			public Keyword2Format()
+				: base("keyword2")
+			{
+			}
+		}
+
+		// ----------------------------------------------------------------
+		[Export]
 		[Name("Linguist.markup")]
 		[BaseDefinition("Linguist")]
 		internal static ClassificationTypeDefinition MarkupDefinition = null;
@@ -493,6 +512,25 @@ namespace Linguist
 		{
 			public TypeFormat()
 				: base("type")
+			{
+			}
+		}
+
+		// ----------------------------------------------------------------
+		[Export]
+		[Name("Linguist.type2")]
+		[BaseDefinition("Linguist")]
+		internal static ClassificationTypeDefinition Type2Definition = null;
+
+		[Export(typeof(EditorFormatDefinition))]
+		[ClassificationType(ClassificationTypeNames = "Linguist.type2")]
+		[Name("Linguist.type2")]
+		[UserVisible(true)]
+		[Order(After = Priority.High)]
+		internal sealed class Type2Format : BaseFormat
+		{
+			public Type2Format()
+				: base("type2")
 			{
 			}
 		}

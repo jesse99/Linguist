@@ -44,6 +44,9 @@ Name: keyword
 ForeColor: Blue
 Bold: true
 
+Name: keyword2
+ForeColor: DarkOrchid
+
 Name: markup
 ForeColor: DarkGreen
 PointSize: 14
@@ -88,3 +91,6 @@ Bold: true
 Name: type
 PointSize: 18
 Bold: true
+
+Name: type2
+PointSize: 18

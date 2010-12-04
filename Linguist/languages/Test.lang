@@ -6,10 +6,10 @@ Globs: *.test default.config
 
 Comment: // [^\r\n]* [\r\n]
 Keyword: \b(?: and | elif | else | false | foreach | if | implies | include | in | let | network | not | or | param | pass | return | true)\b
-Keyword: \b(?: run)\b
-Keyword: \b(?: abort | exit | fails | fwrite | fwriteln | notice | sample | schedule | stderr | stdout | time)\b
-Keyword: \b(?: abs | array | assert | baseTestName | bool | ceiling | char | channel | float | floor | int | max | min | module | rand | round | sign | string | write | writeln)\b
 Keyword: \b(?: __DATE__ | __DEBUG__ | __FILE__ | __LINE__ | __TIME__)\b
+Keyword2: \b(?: run)\b
+Keyword2: \b(?: abort | exit | fails | fwrite | fwriteln | notice | sample | schedule | stderr | stdout | time)\b
+Keyword2: \b(?: abs | array | assert | baseTestName | bool | ceiling | char | channel | float | floor | int | max | min | module | rand | round | sign | string | write | writeln)\b
 Number: (?<= \W) [\d_]+ \. \d+ (?: [eE] [\+-]? \d+)? [a-zA-Z]*
 Number: (?<= \W) 0x [0-9A-Fa-f_]+ (?= \W)
 Number: (?<= \W) 0b [0-1_]+ (?= \W)

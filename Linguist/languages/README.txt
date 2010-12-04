@@ -8,8 +8,9 @@ Language: the name of the language (e.g. makefile).
 Globs: space separated list of file name glob patterns associated with the language (e.g. Makefile Makefile.am *.make *.mk).
 
 Language elements consist of an element name followed by a .NET regex used to match the element. The element name may
-be: Attribute, Command, Default, Comment, Emphasis, Header1, Header2, Header3, Header4, Header5, Italic, Keyword, Markup, 
-Method, Monospace, NewText, Number, OldText, Preprocess, Region, ShellVariable, String, Target, or Type. The regexen are
+be: Attribute, Command, Default, Comment, Emphasis, Header1, Header2, Header3, Header4, Header5, Italic, Keyword, 
+Keyword2, Markup, 
+Method, Monospace, NewText, Number, OldText, Preprocess, Region, ShellVariable, String, Target, Type, or Type2. The regexen are
 compiled using RegexOptions.IgnorePatternWhitespace | RegexOptions.Multiline (so dot does not match new line characters).
 If parenthesis are used within a regular expression they must be non-grouping (i.e. (?: pattern)).
 
