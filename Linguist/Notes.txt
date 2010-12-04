@@ -1,5 +1,4 @@
-﻿* Need a c language.
-* Should color code test functions using something besides keyword. UserKeyword?
+﻿* Should color code test functions using something besides keyword. UserKeyword?
 * Uninstall the old version and install the new version.
 * Review TODOs.
 * Create a README
