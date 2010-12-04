@@ -1,8 +1,5 @@
-﻿* <map> should not be treated as a keyword
-* Add a default.config glob to test language.
-* UserKeyword element?
-* Need a c language.
-* Should color code test functions using something besides keyword.
+﻿* Need a c language.
+* Should color code test functions using something besides keyword. UserKeyword?
 * Uninstall the old version and install the new version.
 * Review TODOs.
 * Create a README
