@@ -87,6 +87,7 @@
     <EmbeddedResource Include="languages\Styles.field" />
     <EmbeddedResource Include="languages\Test.lang" />
     <EmbeddedResource Include="languages\C.lang" />
+    <EmbeddedResource Include="languages\ObjectiveC.lang" />
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
     </None>
