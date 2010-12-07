@@ -57,6 +57,7 @@ ForeColor: DimGray
 
 Name: method
 Bold: true
+PointSize: 14
 
 Name: newtext
 ForeColor: 55,41,254

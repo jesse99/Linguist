@@ -88,6 +88,7 @@
     <EmbeddedResource Include="languages\Test.lang" />
     <EmbeddedResource Include="languages\C.lang" />
     <EmbeddedResource Include="languages\ObjectiveC.lang" />
+    <EmbeddedResource Include="languages\Python.lang" />
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
     </None>
