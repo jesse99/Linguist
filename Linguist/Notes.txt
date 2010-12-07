@@ -1,4 +1,4 @@
-﻿* Uninstall the old version and install the new version.
+﻿* Look at nested comments again.
 * Review TODOs.
 * Create a README
 * Add a reference to this to the language ref doc.
