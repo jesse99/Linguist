@@ -11,4 +11,4 @@ Preprocess: \x23 \s* (?: ifdef | ifndef | if | else | elif | endif)
 Header5: \x23 \s* (?: define | undef | warning | error | line | pragma | include | import)
 String: " (?: [^"\r\n\\] | \\.)* "
 String: ' (?: [^'\r\n\\] | \\.)* '
-String: (?<= \x23(include | import) \s+) < (?: [^>\r\n\\] | \\.)* >
+String: (?<= \x23 (?: include | import) \s+) < (?: [^>\r\n\\] | \\.)* >
