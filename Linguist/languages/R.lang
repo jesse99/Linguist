@@ -1,0 +1,11 @@
+﻿# R (statistics package).
+Language: r
+Globs: *.R
+
+Comment: \x23 .* $
+Keyword: \b(?: NULL | NA | Inf | NaN | TRUE | FALSE | if | else | repeat | while | function | for | in | next | break)\b
+Keyword2: \b (?: [a-zA-Z] [\w_.]*) \s* \(
+Number: (?<= \W) [\d_]+ \. \d+ (?: [eE] [\+-]? \d+)? (?= \W)
+Number: (?<= \W) [\d_]+ (?: [eE] [\+-]? \d+)? L? (?= \W)
+String: " (?: [^"\r\n\\] | \\.)* "
+String: ' (?: [^'\r\n\\] | \\.)* '

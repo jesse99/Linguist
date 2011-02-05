@@ -1,10 +1,4 @@
-﻿* Test language number element should support units.
-* Add ned support. Numbers should support units.
-* Add ini support
-* Add R support. Could use keyworkd2 for words followed by (.
-* Might want to support vec and sca files.
-* Add support for keyword arg styling to test language (match identifier ':' [ \t]* ![\r\n])
-* Install the new version.
+﻿* Install the new version.
 * Use it for a bit.
 * Create a README
 * Put a new version out on cairn.

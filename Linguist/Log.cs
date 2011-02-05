@@ -12,7 +12,7 @@ namespace Linguist
 			{
 				string dir = Constants.LinguistPath;
 
-				string file = Path.Combine(dir, "Log3.txt");
+				string file = Path.Combine(dir, "Log.txt");
 				ms_writer = new StreamWriter(file);
 
 				WriteLine("Started up on {0}.", DateTime.Now);

@@ -1,0 +1,11 @@
+﻿# Omnet ned files
+Language: ned
+Globs: *.ned
+
+Comment: // .* $
+Comment: /\* (?: . | \r | \n)*? \*/
+Keyword: \b(?:  allowunconnected | bool | channel | channelinterface | connections | const | default | double | extends | false | for | gates | if | import | index | inout | input | int | like | module | moduleinterface | network | output | package | parameters | property | simple | sizeof | string | submodules | this | true | types | volatile | xml | xmldoc)\b 
+Keyword2: \@[a-zA-Z_][a-zA-Z0-9_]*
+Number: (?<= \W) \d+ [a-zA-Z]*
+String: " (?: [^"\r\n\\] | \\.)* "
+Type: (?<= (?: network | simple | module) \s+) [a-zA-Z_][a-zA-Z0-9_]*
