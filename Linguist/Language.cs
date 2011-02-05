@@ -16,6 +16,10 @@ namespace Linguist
 			Glob = glob;
 
 			m_classifications.Add(elements[0].Value);			// default style
+			string comments = string.Empty;
+			string strings = string.Empty;
+			IClassificationType commentType = null;
+			IClassificationType stringType = null;
 
 			var regexen = new List<string>(elements.Count);
 			for (int i = 1; i < elements.Count; ++i)
@@ -29,9 +33,25 @@ namespace Linguist
 
 				regexen.Add("(" + pattern + ")");
 				m_classifications.Add(entry.Value);
+
+				if (entry.Value.Classification == "Linguist.comment")
+				{
+					comments += comments.Length == 0 ? "(" + pattern + ")" : "| (" + pattern + ")";
+					commentType = entry.Value;
+				}
+				else if (entry.Value.Classification == "Linguist.string")
+				{
+					strings += strings.Length == 0 ? "(" + pattern + ")" : "| (" + pattern + ")";
+					stringType = entry.Value;
+				}
 			}
 
-			m_regex = new Regex(string.Join(" | ", regexen.ToArray()), RegexOptions.IgnorePatternWhitespace | RegexOptions.Multiline | RegexOptions.Compiled);
+			RegexOptions options = RegexOptions.IgnorePatternWhitespace | RegexOptions.Multiline;
+			m_regex = new Regex(string.Join(" | ", regexen.ToArray()), options | RegexOptions.Compiled);
+			if (commentType != null)
+				m_comment = new KeyValuePair<Regex, IClassificationType>(new Regex(comments, options), commentType);
+			if (stringType != null)
+				m_string = new KeyValuePair<Regex, IClassificationType>(new Regex(strings, options), stringType);
 		}
 
 		public string Name { get; private set; }
@@ -68,6 +88,26 @@ namespace Linguist
 			return spans;
 		}
 
+		public ClassificationSpan GetStringClassification(ClassificationSpan original)
+		{
+			// We need to match the span against our comment regex or we can wind up
+			// with situations where we apply our style to an unterminated span and
+			// are not able to reset our style when the span is closed (e.g. verbatim
+			// strings in C#).
+			if (m_string.Key != null && m_string.Key.IsMatch(original.Span.GetText()))
+				return new ClassificationSpan(original.Span, m_string.Value);
+			else
+				return original;
+		}
+
+		public ClassificationSpan GetCommentClassification(ClassificationSpan original)
+		{
+			if (m_comment.Key != null && m_comment.Key.IsMatch(original.Span.GetText()))
+				return new ClassificationSpan(original.Span, m_comment.Value);
+			else
+				return original;
+		}
+
 		#region Private Methods
 		private bool DoValidateRegex(string name, string expr)
 		{
@@ -100,6 +140,8 @@ namespace Linguist
 		#region Fields
 		private Regex m_regex;
 		private List<IClassificationType> m_classifications = new List<IClassificationType>();
+		private KeyValuePair<Regex, IClassificationType> m_comment;
+		private KeyValuePair<Regex, IClassificationType> m_string;
 		#endregion
 	}
 }

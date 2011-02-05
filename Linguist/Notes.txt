@@ -1,11 +1,24 @@
-﻿* Look at nested comments again.
+﻿* Do a push.
+* Comments should default to green.
 * Review TODOs.
+* C should hilight uint and u8.
+* TRUE and FALSE should be Keyword2 for C. Why is event colorized in c++?
+* *.itest and *.scenario need to be test lang globs.
+* Python needs to support decorators:
+	Attribute: (?<= ^ \s*) @ [\w]+ [^\x23\n\r]*
+* Test language number element should support units.
+* Add ned support. Numbers should support units.
+* Add ini support
+* Add R support. Could use keyworkd2 for words followed by (.
+* Might want to support vec and sca files.
+* Add support for keyword arg styling to test language (match identifier ':' [ \t]* ![\r\n])
 * Create a README
+* Put a new version out on cairn.
+* Email tech team.
 * Add a reference to this to the language ref doc.
 
 * May want to use a weak list to avoid doing a snapshot -> doc -> extension -> language search every time
 	- make sure that this cache is reset on rehup
-* Replace IronPython with Linguist?
 * May want to add a shebang option to language files:
 	- would need to cache this information if it is found in a snapshot
 * Use reflection to init ms_elements.
