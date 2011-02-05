@@ -8,5 +8,6 @@ Number: (?<= \W) (?: 0[xX])? \d+ [lL]? (?= \W)
 String: """ (?: [^\\] | \\.)*? """
 String: r? " (?: [^"\r\n\\] | \\.)* "
 String: r? ' (?: [^'\r\n\\] | \\.)* '
+Attribute: (?<= ^ \s*) @ [\w]+ [^\x23\n\r]*
 Type: (?<=\b class \s+) \w+
 Method: (?<=\b def \s+) \w+
