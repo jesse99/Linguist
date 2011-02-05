@@ -2,7 +2,7 @@
 Language: field
 Globs: *.field *.lang *.stest
 
-Comment: \x23 [^\r\n]* [\r\n]
+Comment: \x23 [^\r\n]* $
 Keyword: ^ [a-zA-Z] [a-zA-Z0-9_-]+ [!:]
 Preprocess: ------------------------------------------------------------
 

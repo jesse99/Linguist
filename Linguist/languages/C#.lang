@@ -1,7 +1,7 @@
 Language: csharp
 Globs: *.cs
 
-Comment: // [^\r\n]* [\r\n]
+Comment: // [^\r\n]* $
 Comment: /\* (?: . | \r | \n)*? \*/
 Type: (?<= class \s+) \w+
 Type: (?<= struct \s+) \w+
