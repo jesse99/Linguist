@@ -14,7 +14,7 @@ Keyword2: \b(?:  circularMove | device | linearMove | location | move | perimete
 Number: (?<= \W) [\d_]+ \. \d+ (?: [eE] [\+-]? \d+)? [a-zA-Z]*
 Number: (?<= \W) 0x [0-9A-Fa-f_]+ (?= \W)
 Number: (?<= \W) 0b [0-1_]+ (?= \W)
-Number: (?<= \W) [\d_]+ (?= \W)
+Number: (?<= \W) [\d_]+ [a-zA-Z]*
 String: " (?: [^"\r\n\\] | \\.)* "
 String: ' (?: [^'\r\n\\] | \\.)* '
 
