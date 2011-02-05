@@ -7,7 +7,7 @@ Name: command
 ForeColor: Blue
 
 Name: comment
-ForeColor: Red
+ForeColor: 0, 100, 0
 Italic: true
 
 Name: default
