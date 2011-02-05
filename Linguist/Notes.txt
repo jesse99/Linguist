@@ -34,3 +34,4 @@
 
 "C:\\Users\\jjones\\AppData\\Local"
 C:\Users\<name>\AppData\Local\Linguist\Log.txt
+

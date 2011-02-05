@@ -4,7 +4,7 @@
 Language: test
 Globs: *.test *.itest *.scenario default.config
 
-Comment: // [^\r\n]* $
+Comment: // .* $
 Keyword: \b(?: and | elif | else | false | foreach | if | implies | include | in | let | network | not | or | param | pass | return | true)\b
 Keyword: \b(?: __DATE__ | __DEBUG__ | __FILE__ | __LINE__ | __TIME__)\b
 Keyword2: \b(?: run)\b
