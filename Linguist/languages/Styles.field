@@ -63,7 +63,7 @@ Name: newtext
 ForeColor: 55,41,254
 
 Name: number
-ForeColor: Brown
+ForeColor: 122, 100, 40
 
 Name: oldtext
 ForeColor: 125,6,73
