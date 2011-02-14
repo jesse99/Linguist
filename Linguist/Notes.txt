@@ -1,9 +1,5 @@
-﻿* New double classify is causing bad slowdowns. Maybe there is a GC issue?
-* Why is string highlighted in strings?
-* Bump the version number.
-* See if it installs w/o requiring an uninstall
-* Use it for a bit.
-* Create a README
+﻿* Use it for a bit.
+* Create a README. Mention that need to uninstall before installing.
 * Put a new version out on cairn.
 * Email tech team.
 * Add a reference to this to the language ref doc.
