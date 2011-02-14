@@ -1,4 +1,7 @@
-﻿* Install the new version.
+﻿* New double classify is causing bad slowdowns. Maybe there is a GC issue?
+* Why is string highlighted in strings?
+* Bump the version number.
+* See if it installs w/o requiring an uninstall
 * Use it for a bit.
 * Create a README
 * Put a new version out on cairn.

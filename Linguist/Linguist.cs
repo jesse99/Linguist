@@ -39,11 +39,15 @@ namespace Linguist
 
 				if (lang != null)
 				{
-					IEnumerable<ClassificationSpan> strings = DoGetStringSpans(lang, span);
-					IEnumerable<ClassificationSpan> comments = DoGetCommentSpans(lang, span);
+					List<ClassificationSpan> strings = new List<ClassificationSpan>();
+					List<ClassificationSpan> comments = new List<ClassificationSpan>();
+					DoGetStringSpans(lang, span, strings, comments);
 
-					IEnumerable<ClassificationSpan> mine = lang.GetClassificationSpans(span);
-					spans.AddRange(from c in mine where !strings.Any(d => d.Span.OverlapsWith(c.Span)) && !comments.Any(d => d.Span.OverlapsWith(c.Span)) select c);
+					if (!strings.Any(s => s.Span.Contains(span) && !comments.Any(t => t.Span.Contains(span))))
+					{
+						IEnumerable<ClassificationSpan> mine = lang.GetClassificationSpans(span);
+						spans.AddRange(from c in mine where !strings.Any(d => d.Span.OverlapsWith(c.Span)) && !comments.Any(d => d.Span.OverlapsWith(c.Span)) select c);
+					}
 					spans.AddRange(strings);
 					spans.AddRange(comments);
 				}
@@ -56,24 +60,19 @@ namespace Linguist
 		public event EventHandler<ClassificationChangedEventArgs> ClassificationChanged;
 
 		#region Private Methods
-		private IEnumerable<ClassificationSpan> DoGetStringSpans(Language lang, SnapshotSpan span)
+		private void DoGetStringSpans(Language lang, SnapshotSpan span, List<ClassificationSpan> strings, List<ClassificationSpan> comments)
 		{
-			var spans = from c in m_aggregator.GetClassificationSpans(span)
-						let n = c.ClassificationType.Classification.ToLower()
-						where n.Contains("string") 
-						select lang.GetStringClassification(c);
+			IEnumerable<ClassificationSpan> spans = m_aggregator.GetClassificationSpans(span);
 
-			return spans;
-		}
+			strings.AddRange(from c in spans
+			            let n = c.ClassificationType.Classification.ToLower()
+			            where n.Contains("string")
+			            select lang.GetStringClassification(c));
 
-		private IEnumerable<ClassificationSpan> DoGetCommentSpans(Language lang, SnapshotSpan span)
-		{
-			var spans = from c in m_aggregator.GetClassificationSpans(span) 
-						let n = c.ClassificationType.Classification.ToLower() 
-						where n.Contains("comment")
-						select lang.GetCommentClassification(c);
-
-			return spans;
+			comments.AddRange(from c in spans 
+			            let n = c.ClassificationType.Classification.ToLower() 
+			            where n.Contains("comment")
+			            select lang.GetCommentClassification(c));
 		}
 		#endregion
 
