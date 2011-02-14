@@ -28,7 +28,7 @@ namespace Linguist
 
 		public IList<ClassificationSpan> GetClassificationSpans(SnapshotSpan span)
 		{
-			List<ClassificationSpan> spans = ms_noSpans;
+			List<ClassificationSpan> spans = null;
 
 			object prop;
 			if (span.Snapshot.TextBuffer.Properties.TryGetProperty(typeof(ITextDocument), out prop))
@@ -43,6 +43,7 @@ namespace Linguist
 					List<ClassificationSpan> comments = new List<ClassificationSpan>();
 					DoGetStringSpans(lang, span, strings, comments);
 
+					spans = new List<ClassificationSpan>();
 					if (!strings.Any(s => s.Span.Contains(span) && !comments.Any(t => t.Span.Contains(span))))
 					{
 						IEnumerable<ClassificationSpan> mine = lang.GetClassificationSpans(span);
@@ -53,7 +54,7 @@ namespace Linguist
 				}
 			}
 
-			return spans;
+			return spans ?? ms_noSpans;
 		}
 
 		// Classifiers can invoke this to notify the editor of changes in classifications.
