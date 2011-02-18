@@ -2,14 +2,14 @@
 # Linguist doesn't handle multi-line elements very well so we don't support vebatim strings
 # or nested comments.
 Language: test
-Globs: *.test *.itest *.scenario default.config
+Globs: *.test *.itest *.scenario *.process default.config
 
 Comment: // .* $
 Keyword: \b(?: and | elif | else | false | foreach | if | implies | include | in | let | network | not | or | param | pass | return | true)\b
 Keyword: \b(?: __DATE__ | __DEBUG__ | __FILE__ | __LINE__ | __TIME__)\b
 Keyword2: \b(?: run)\b
 Keyword2: \b(?: abort | exit | fails | fwrite | fwriteln | notice | sample | schedule | simTime | stderr | stdout)\b
-Keyword2: \b(?: abs | array | assert | baseTestName | bool | ceiling | char | channel | device | float | floor | group | int | max | min | module | rand | round | sign | string | write | writeln)\b
+Keyword2: \b(?: abs | array | assert | baseTestName | bool | ceiling | char | channel | device | ensure | float | floor | group | int | max | min | module | rand | round | sign | string | write | writeln)\b
 Keyword2: \b(?:  circularMove | device | linearMove | location | move | perimeterMove | randomMove | stopMoving | test | traffic)\b
 Number: (?<= \W) [\d_]+ \. \d+ (?: [eE] [\+-]? \d+)? [a-zA-Z]*
 Number: (?<= \W) 0x [0-9A-Fa-f_]+ (?= \W)
