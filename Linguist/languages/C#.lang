@@ -4,6 +4,7 @@ Globs: *.cs
 Comment: // .* $
 Comment: /\* (?: . | \r | \n)*? \*/
 Type: (?<= class \s+) \w+
+Type: (?<= interface \s+) \w+
 Type: (?<= struct \s+) \w+
 Type: (?<= enum \s+) \w+
 Attribute: (?<= ^ \s* \[ (?: \w+ \s* :)? \s*) [\w\.]+ \s* (?= \]|\()
