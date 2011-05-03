@@ -1,6 +1,4 @@
-﻿* Put a new version out on cairn.
-* Email tech team.
-
+﻿* Color scheme for diffs looks awful.
 * Create a README. Mention that need to uninstall before installing.
 * Add a dot file language. See http://www.graphviz.org/doc/info/lang.html
 * Add a reference to this to the language ref doc.
@@ -29,3 +27,13 @@
 "C:\\Users\\jjones\\AppData\\Local"
 C:\Users\<name>\AppData\Local\Linguist\Log.txt
 
+
+Only apply string style to text that other classifiers classified as strings
+Added *.cfg to python globs. Added ensure and *.process glob to test languag
+Added support for ini, ned, and r files
+
+Allow units after ints
+Added element for python decorators
+Comments default to green instead of red
+Added itest and scenario to globs
+Added FALSE, TRUE, s8, u8, etc to C

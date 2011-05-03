@@ -119,6 +119,25 @@ namespace Linguist
 
 		// ----------------------------------------------------------------
 		[Export]
+		[Name("Linguist.diffloc")]
+		[BaseDefinition("Linguist")]
+		internal static ClassificationTypeDefinition DiffLocDefinition = null;
+
+		[Export(typeof(EditorFormatDefinition))]
+		[ClassificationType(ClassificationTypeNames = "Linguist.diffloc")]
+		[Name("Linguist.diffloc")]
+		[UserVisible(true)]
+		[Order(After = Priority.High)]
+		internal sealed class DiffLocFormat : BaseFormat
+		{
+			public DiffLocFormat()
+				: base("diffloc")
+			{
+			}
+		}
+
+		// ----------------------------------------------------------------
+		[Export]
 		[Name("Linguist.emphasis")]
 		[BaseDefinition("Linguist")]
 		internal static ClassificationTypeDefinition EmphasisDefinition = null;

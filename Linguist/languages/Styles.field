@@ -14,6 +14,10 @@ Name: default
 FontName: Consolas
 PointSize: 12
 
+Name: diffloc
+ForeColor: 70,130,180
+PointSize: 12
+
 Name: emphasis
 Bold: true
 
@@ -60,13 +64,13 @@ Bold: true
 PointSize: 14
 
 Name: newtext
-ForeColor: 55,41,254
+ForeColor: Green
 
 Name: number
 ForeColor: 122, 100, 40
 
 Name: oldtext
-ForeColor: 125,6,73
+ForeColor: Red
 
 Name: preprocess
 ForeColor: 131,13,253
