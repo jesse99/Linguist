@@ -1,7 +1,15 @@
-﻿* Color scheme for diffs looks awful.
-* Create a README. Mention that need to uninstall before installing.
+﻿* Commit an html version of the readme
+* Remove the readme.txt file.
+* Log file should be log.txt
+* The addon manager has a lame description of linguist.
+* Can we add the readme to the solution?
+* Make sure that github uses the readme.
+* Add review language element names to release checklist.
 * Add a dot file language. See http://www.graphviz.org/doc/info/lang.html
 * Add a reference to this to the language ref doc.
+* Create a release checklist.
+* Make an annoucement somewhere?
+* Add it to the official list of studio 3rd party addons?
 
 * May want to use a weak list to avoid doing a snapshot -> doc -> extension -> language search every time
 	- make sure that this cache is reset on rehup
@@ -22,6 +30,8 @@
 	- styles are handled by the format classes which are instantiated by the editor
 	- saving these into a list when they are created and updating them later had no effect
 	- so seems that we would have to somehow tell the editor that the formats have changed
+* Release checklist:
+	- make sure that the language element names listed in the readme are correct
 	
 
 "C:\\Users\\jjones\\AppData\\Local"
