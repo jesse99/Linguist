@@ -92,12 +92,13 @@
     <EmbeddedResource Include="languages\Ned.lang" />
     <EmbeddedResource Include="languages\Ini.lang" />
     <EmbeddedResource Include="languages\R.lang" />
+    <None Include="README.asciidoc" />
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="languages\README.txt" />
+    <Content Include="README.html" />
     <Content Include="Notes.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
