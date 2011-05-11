@@ -1,3 +1,5 @@
+# If new elements are added (or old ones removed) then Definitons.cs
+# and Languages.Init have to be updated.
 Name: attribute
 ForeColor: DarkGreen
 PointSize: 14
