@@ -1,4 +1,4 @@
-Linguist 0.1 README
+Linguist 0.3 README
 ===================
 
 == 0 Description ==

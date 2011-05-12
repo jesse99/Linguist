@@ -1,13 +1,11 @@
-﻿* Commit an html version of the readme
-* Remove the readme.txt file.
-* Log file should be log.txt
-* The addon manager has a lame description of linguist.
-* Can we add the readme to the solution?
-* Make sure that github uses the readme.
-* Add review language element names to release checklist.
+﻿* Studio copied the readme files...
 * Add a dot file language. See http://www.graphviz.org/doc/info/lang.html
 * Add a reference to this to the language ref doc.
 * Create a release checklist.
+* Create a zip file.
+* Make sure that the zip can be used to install.
+* Upload a zip file.
+* Email people.
 * Make an annoucement somewhere?
 * Add it to the official list of studio 3rd party addons?
 
@@ -31,7 +29,11 @@
 	- saving these into a list when they are created and updating them later had no effect
 	- so seems that we would have to somehow tell the editor that the formats have changed
 * Release checklist:
+	- review the readme
+	- update the version in the readme and in the assembly and in the manifest
+	- build a new readme.html
 	- make sure that the language element names listed in the readme are correct
+	- create a versions branch
 	
 
 "C:\\Users\\jjones\\AppData\\Local"
