@@ -1,10 +1,8 @@
 ﻿asciidoc --backend=xhtml11 --out-file=Linguist/README.html Linguist/README.asciidoc && open Linguist/README.html
+zip -j Linguist-0.3.zip Linguist/README.html Linguist/bin/Debug/Linguist.dll Linguist/bin/Debug/Linguist.vsix Linguist/bin/Debug/extension.vsixmanifest
 
 
 * Release checklist:
-	- push changes
-	- create a zip file (and record the command used to create it)
-	- make sure that the zip file can be used to install the addon)
 	- upload a new zip file
 	- email
 	- create a new branch for the release
