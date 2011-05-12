@@ -1,14 +1,18 @@
-﻿* Studio copied the readme files...
-* Add a dot file language. See http://www.graphviz.org/doc/info/lang.html
-* Add a reference to this to the language ref doc.
-* Create a release checklist.
-* Create a zip file.
-* Make sure that the zip can be used to install.
-* Upload a zip file.
+﻿asciidoc --backend=xhtml11 --out-file=Linguist/README.html Linguist/README.asciidoc && open Linguist/README.html
+
+
+* Release checklist:
+	- push changes
+	- create a zip file (and record the command used to create it)
+	- make sure that the zip file can be used to install the addon)
+	- upload a new zip file
+	- email
+	- create a new branch for the release
 * Email people.
 * Make an annoucement somewhere?
 * Add it to the official list of studio 3rd party addons?
 
+* Add a directory with test files for each language.
 * May want to use a weak list to avoid doing a snapshot -> doc -> extension -> language search every time
 	- make sure that this cache is reset on rehup
 * May want to add a shebang option to language files:
@@ -29,23 +33,14 @@
 	- saving these into a list when they are created and updating them later had no effect
 	- so seems that we would have to somehow tell the editor that the formats have changed
 * Release checklist:
-	- review the readme
-	- update the version in the readme and in the assembly and in the manifest
-	- build a new readme.html
+ 	- test a few different languages
+	- search for TODO (in all files)
+	- update the version in the readme, the assembly, and the manifest
 	- make sure that the language element names listed in the readme are correct
-	- create a versions branch
-	
-
-"C:\\Users\\jjones\\AppData\\Local"
-C:\Users\<name>\AppData\Local\Linguist\Log.txt
-
-
-Only apply string style to text that other classifiers classified as strings
-Added *.cfg to python globs. Added ensure and *.process glob to test languag
-Added support for ini, ned, and r files
-
-Allow units after ints
-Added element for python decorators
-Comments default to green instead of red
-Added itest and scenario to globs
-Added FALSE, TRUE, s8, u8, etc to C
+	- review the readme
+	- use git log --oneline > CHANGE_LOG
+	- update CHANGES file
+	- push changes
+	- upload a new zip file
+	- email
+	- create a new branch for the release

@@ -93,6 +93,7 @@
     <EmbeddedResource Include="languages\Ned.lang" />
     <EmbeddedResource Include="languages\Ini.lang" />
     <EmbeddedResource Include="languages\R.lang" />
+    <EmbeddedResource Include="languages\Dot.lang" />
     <None Include="README.asciidoc" />
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
