@@ -2,10 +2,16 @@
 zip -j Linguist-0.3.zip Linguist/README.html Linguist/bin/Debug/Linguist.dll Linguist/bin/Debug/Linguist.vsix Linguist/bin/Debug/extension.vsixmanifest
 
 
+git checkout -b releases/version-0.3
+git push origin releases/version-0.3
+git checkout master 
+git branch -f releases/version-0.3 origin/releases/version-0.3
+git checkout releases/version-0.3
+
+
 * Release checklist:
-	- upload a new zip file
-	- email
 	- create a new branch for the release
+	- email
 * Email people.
 * Make an annoucement somewhere?
 * Add it to the official list of studio 3rd party addons?
@@ -40,5 +46,11 @@ zip -j Linguist-0.3.zip Linguist/README.html Linguist/bin/Debug/Linguist.dll Lin
 	- update CHANGES file
 	- push changes
 	- upload a new zip file
-	- email
 	- create a new branch for the release
+		git checkout -b releases/version-0.3
+		git push origin releases/version-0.3
+		git checkout master 
+		git branch -f releases/version-0.3 origin/releases/version-0.3
+		git checkout releases/version-0.3
+	- email
+	
