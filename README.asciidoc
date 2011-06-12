@@ -3,7 +3,7 @@ Linguist 0.1 README
 
 == 0 Description ==
 
-Linguist is an addon for Visual Studio 2010 allowing customizable syntax highlighting
+Linguist is an extension for Visual Studio 2010 allowing customizable syntax highlighting
 based on file names. Support for new languages may be easily added using regular expressions
 to identify the various language elements and language elements may be customized using
 different fonts, point sizes, colors, and font styles (e.g. bold and italic). The built-in
