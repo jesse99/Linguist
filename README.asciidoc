@@ -9,17 +9,17 @@ to identify the various language elements and language elements may be customize
 different fonts, point sizes, colors, and font styles (e.g. bold and italic). The built-in
 languages include C#, C++, C, Python, Makefiles, patch files, etc. 
 
-To install the addon close studio and double-click the `Linguist.vsix` file. To uninstall the addon
+To install the extension close studio and double-click the `Linguist.vsix` file. To uninstall the extension
 select the Extension Manager... item from Studio's Tool menu, select Linguist, and press the
-Uninstall button. To upgrade the addon uninstall the old version and install the new version.
+Uninstall button. To upgrade the extension uninstall the old version and install the new version.
 
-To check for newer versions of the addon visit https://github.com/jesse99/Linguist[github].
+To check for newer versions of the extension visit https://github.com/jesse99/Linguist[github].
 
 == 1 Operation ==
 
-When the addon starts up for the first time it will create standard and custom directories 
+When the extension starts up for the first time it will create standard and custom directories 
 inside `C:\Users\<user name>\AppData\Local\Linguist`. The standard directory will contain the built-in 
-language and style files. The custom directory will be empty. When the addon starts up again
+language and style files. The custom directory will be empty. When the extension starts up again
 old or missing files in the standard directory will be added or updated.
 
 Files within the custom directory can be used to define new languages or to override
@@ -31,7 +31,7 @@ followed by a colon, followed by arbitrary text. Identifiers start with a letter
 characters, underscrores, and dashes.
 
 Testing source code changes is quite simple: make your change, press F5, and a special instance
-of Studio will launch with the new version of the addon active. Breakpoints may be used
+of Studio will launch with the new version of the extension active. Breakpoints may be used
 normally.
 
 == 2 Style File ==
