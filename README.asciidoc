@@ -88,4 +88,4 @@ Changes to language files in the custom directory take effect while Studio is ru
 to see them).
 
 
-jesjones@mindspring.com
+jesse9jones@gmail.com
