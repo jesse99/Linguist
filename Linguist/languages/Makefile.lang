@@ -5,18 +5,15 @@
 
 # May want a custom language for automake files.
 Language: makefile
-Globs: Makefile Makefile.am *.make *.mk
+Globs: Makefile Makefile.am *.make *.mk *.mak makefrag
 
 Comment: \x23 .* $
-Keyword: \b(?: (?<! -)define | ended | ifdef | ifndef | ifeq | ifneq | else | endif | include | sinclude | override | export | unexport | VPATH | vpath)\b
+Keyword: \b(?: (?<! -)define | endef | export | ifdef | ifndef | ifeq | ifneq | else | endif | include | sinclude | override | export | unexport | VPATH | vpath)\b
 Keyword: \b(?: DEFAULT | IGNORE | POSIX | PRECIOUS | SCCS_GET | SILENT | SUFFIXES)\b
 Keyword: \$\^ | \$@ | \$% | \$\? | \$< | \$\* | \$@D | \$%D | \$\?D | \$<D | \$\*D | \$@F | \$%F | \$\?F | \$<F | \$\*F
 Keyword: (?<= \$\() (?: abspath | addprefix | addsuffix | and | basename | call | dir | error | eval | filter-out | filter | findstring | firstword | flavor | foreach | if | info | join | lastword | notdir | or | origin | patsubst | realpath | shell | sort | strip | subst | suffix | value | warning | wildcard | wordlist | words | word)
 Number: (?<= \W) \d+ (?= \W)
-Target: ^ [-\w\.\(\)/\\$]+ \s* : (?! =)
+Target: ^ [-\w\.\(\)%/\\$]+ \s* : (?! =)
 String: " (?: [^"\r\n\\] | \\. | \\\r | \\\n)* "
 String: ` (?: [^`\r\n\\] | \\. | \\\r | \\\n)* `
 String: ' (?: [^'\r\n\\] | \\. | \\\r | \\\n)* '
-
-
-
