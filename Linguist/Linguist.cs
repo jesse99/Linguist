@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.Linq;
-//using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Windows.Media;
 using Microsoft.VisualStudio.Text;
 using Microsoft.VisualStudio.Text.Classification;
 using Microsoft.VisualStudio.Utilities;
 
-#pragma warning disable 67
+#pragma warning disable 67		// The event 'event' is never used
 
 namespace Linguist
 {
@@ -27,6 +26,33 @@ namespace Linguist
 		}
 
 		public IList<ClassificationSpan> GetClassificationSpans(SnapshotSpan span)
+		{
+			IList<ClassificationSpan> result = ms_noSpans;
+
+			try
+			{
+				// DoGetClassificationSpans will indirectly call m_aggregator.GetClassificationSpans
+				// which should be safe because we get the aggregator before creating this. But when
+				// saving a new file the aggregator is apparently mutated and does include this.
+				if (!ms_recursing)
+				{
+					ms_recursing = true;
+					result = DoGetClassificationSpans(span); 
+				}
+			}
+			finally
+			{
+				ms_recursing = false;
+			}
+
+			return result;
+		}
+
+		// Classifiers can invoke this to notify the editor of changes in classifications.
+		public event EventHandler<ClassificationChangedEventArgs> ClassificationChanged;
+
+		#region Private Methods
+		private IList<ClassificationSpan> DoGetClassificationSpans(SnapshotSpan span)
 		{
 			List<ClassificationSpan> spans = null;
 
@@ -57,10 +83,6 @@ namespace Linguist
 			return spans ?? ms_noSpans;
 		}
 
-		// Classifiers can invoke this to notify the editor of changes in classifications.
-		public event EventHandler<ClassificationChangedEventArgs> ClassificationChanged;
-
-		#region Private Methods
 		private void DoGetStringSpans(Language lang, SnapshotSpan span, List<ClassificationSpan> strings, List<ClassificationSpan> comments)
 		{
 			IEnumerable<ClassificationSpan> spans = m_aggregator.GetClassificationSpans(span);
@@ -80,6 +102,7 @@ namespace Linguist
 		#region Fields
 		private IClassifier m_aggregator;
 		private List<ClassificationSpan> ms_noSpans = new List<ClassificationSpan>();
+		private bool ms_recursing;
 		#endregion
 	}
 }
