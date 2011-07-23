@@ -94,6 +94,7 @@
     <EmbeddedResource Include="languages\Ini.lang" />
     <EmbeddedResource Include="languages\R.lang" />
     <EmbeddedResource Include="languages\Dot.lang" />
+    <EmbeddedResource Include="languages\Ruby.lang" />
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
     </None>
