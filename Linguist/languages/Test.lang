@@ -2,7 +2,7 @@
 # Linguist doesn't handle multi-line elements very well so we don't support vebatim strings
 # or nested comments.
 Language: test
-Globs: *.test *.itest *.scenario *.process default.config
+Globs: *.test *.itest *.scenario *.process *.tc default.config
 
 Comment: // .* $
 Keyword: \b(?: and | elif | else | false | foreach | if | implies | include | in | let | network | not | or | param | pass | return | true)\b
