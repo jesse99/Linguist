@@ -30,7 +30,7 @@ with a `#` are comments. Lines with only white space are ignored. Fields start w
 followed by a colon, followed by arbitrary text. Identifiers start with a letter followed by alpha-numeric
 characters, underscrores, and dashes.
 
-Testing source code changes is quite simple: make your change, press F5, and a special instance
+Testing source code changes with the solution is quite simple: make your change, press F5, and a special instance
 of Studio will launch with the new version of the extension active. Breakpoints may be used
 normally.
 
