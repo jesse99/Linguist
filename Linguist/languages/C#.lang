@@ -8,8 +8,8 @@ Type: (?<= interface \s+) \w+
 Type: (?<= struct \s+) \w+
 Type: (?<= enum \s+) \w+
 Attribute: (?<= ^ \s* \[ \s*) \w+ \s* (?= [\(\]])
-Keyword: \b(?: abstract | event | new | struct | as | dynamic | explicit | null | switch | base | extern | object | this | bool | false | operator | throw | break | finally | out | true | byte | fixed | override | try | case | float | params | typeof | catch | for | private | uint | char | foreach | protected | ulong | checked | goto | public | unchecked | class | if | readonly | unsafe | const | implicit | ref | ushort | continue | in | return | using | decimal | int | sbyte | virtual | default | interface | sealed | volatile | delegate | internal | short | void | do | is | sizeof | while | double | lock | stackalloc | else | long | static | enum | namespace | string)\b
-Keyword: \b(?: by | on | ascending | descending | from | get | group | into | join | let | orderby | partial | partial | select | set | var | where | where | yield )\b	
+Keyword: \b(?<! @)(?: abstract | event | new | struct | as | dynamic | explicit | null | switch | base | extern | object | this | bool | false | operator | throw | break | finally | out | true | byte | fixed | override | try | case | float | params | typeof | catch | for | private | uint | char | foreach | protected | ulong | checked | goto | public | unchecked | class | if | readonly | unsafe | const | implicit | ref | ushort | continue | in | return | using | decimal | int | sbyte | virtual | default | interface | sealed | volatile | delegate | internal | short | void | do | is | sizeof | while | double | lock | stackalloc | else | long | static | enum | namespace | string)\b
+Keyword: \b(?<! @)(?: by | on | ascending | descending | from | get | group | into | join | let | orderby | partial | partial | select | set | var | where | where | yield )\b	
 Number: (?<= \W) \d+ \. \d+ (?: [eE] [\+-]? \d+)? [FfDdMm]? (?= \W)
 Number: (?<= \W) \. \d+ (?: [eE] [\+-]? \d+)? [FfDdMm]? (?= \W)
 Number: (?<= \W) \d+ [eE] [\+-]? \d+ [FfDdMm]? (?= \W)
