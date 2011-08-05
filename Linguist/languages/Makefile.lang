@@ -5,7 +5,7 @@
 
 # May want a custom language for automake files.
 Language: makefile
-Globs: Makefile Makefile.am *.make *.mk *.mak makefrag
+Globs: Makefile Makefile.am *.make *.mk *.mak makefrag Make.shared
 
 Comment: \x23 .* $
 Keyword: \b(?: (?<! -)define | endef | export | ifdef | ifndef | ifeq | ifneq | else | endif | include | sinclude | override | export | unexport | VPATH | vpath)\b

@@ -1,8 +1,26 @@
 ﻿asciidoc --backend=xhtml11 --out-file=README.html README.asciidoc && open README.html
 zip -j Linguist-0.3.zip Linguist/README.html Linguist/bin/Debug/Linguist.dll Linguist/bin/Debug/Linguist.vsix Linguist/bin/Debug/extension.vsixmanifest
 
+* Highlight TRUE and FALSE.
+* Release checklist:
+ 	- test a few different languages
+	- search for TODO (in all files)
+	- update the version in the readme, the assembly, and the manifest
+	- make sure that the language element names listed in the readme are correct
+	- review the readme
+	- use git log --oneline > CHANGE_LOG
+	- update CHANGES file
+	- push changes
+	- upload a new vsix file
+	- create a new branch for the release
+		git checkout -b releases/version-0.3
+		git push origin releases/version-0.3
+		git checkout master 
+		git branch -f releases/version-0.3 origin/releases/version-0.3
+		git checkout releases/version-0.3
+	- email
+
 * Attributes are not always highlighted properly (tho the regex looks right)
-* It seems that only the vsix file is neccessary for installation.
 * Add a directory with test files for each language.
 * May want to use a weak list to avoid doing a snapshot -> doc -> extension -> language search every time
 	- make sure that this cache is reset on rehup
@@ -32,7 +50,7 @@ zip -j Linguist-0.3.zip Linguist/README.html Linguist/bin/Debug/Linguist.dll Lin
 	- use git log --oneline > CHANGE_LOG
 	- update CHANGES file
 	- push changes
-	- upload a new zip file
+	- upload a new vsix file
 	- create a new branch for the release
 		git checkout -b releases/version-0.3
 		git push origin releases/version-0.3
