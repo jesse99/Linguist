@@ -1,0 +1,11 @@
+Version 0.4 (Aug 5 2011)
+
+* Fixed an infinite recursion crasher reported by ben-craig when saving new files.
+* Renamed ended keywork in Makefile endef. Makefile targets now style targets with percent signs.
+* Added Ruby.lang file from ben-craig.
+* Added TRUE and FALSE to C++ Keywords2 list (*.h files are treated as C++).
+* Added ushort, uint, and ulong to C and C++.
+* C# does not style keywords prefixed with a @.
+* Added Make.shared, makefrag, and *.mak to Makefile globs list.
+* Added *.mako to Python globs list.
+* Added *.tc to Test globs list.

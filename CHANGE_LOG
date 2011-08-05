@@ -1,0 +1,67 @@
+9fcdf8d Uncremented version number
+52aa457 Added *.tc to globs list
+ef64f62 Added Make.shared to glob list
+ddcd019 Added TRUE and FALSE (*.h files are treated as c++)
+db8c873 Don't style keywords that begin with a @
+6ad95c3 Added Ruby.lang from ben-craig
+812753a Tried to make C# attribute highlighting more reliable.
+75618c9 Added *.mak and makefrag globs. Renamed ended keyword endef. Target can include %.
+1d11a83 Added *.mako glob for Python
+cf82daa Work around for an infinite recursion bug reported by ben-craig
+92d1005 Added ushort, uint, and ulong to c and c++
+baf5891 Change a bunch more places to say extension instead of addon
+a6c7349 It's an extension not an addon
+dbf21e3 Updated email address
+7458e8f Updated
+b25fd5e Updated
+01ca1b8 Moving notes file out of the source directory
+c131aec Trying to recover from studio copying the readmes
+137e541 Reverting the removal of the top level readmes since github wants them there.
+285543a Added support for the gnu dot language
+5a720ba Updated version number
+eaddb3e Removed files that studio copied for some asinine reason
+3796584 Updated description and version
+f19be3a Added a real readme
+7d700e7 Added a real readme
+56a0ede Added a comment
+b155273 Added cygstart to command names
+dd5edaf Added a couple more special keywords
+f62a529 Interface names are now treated as types
+4a818ed Made the diff/patch color scheme a lot better
+e5501d2 Added *.cfg to python globs. Added ensure and *.process glob to test language.
+6089e2f Updated
+72a8fc6 Fixed a really icky slowdown due to the GC
+bd2df16 Sped up strings and comments a bit. Bumped version number.
+4028e7f Added support for ini, ned, and r files
+b857434 Made number color more subtle
+7113893 Fixed one of the string regexen
+c6b09ef Fixed single line comments so that they work with windows line endings
+ff36ec6 Allow units after ints
+6806fd5 Added element for decorators
+340573c Comments default to green instead of red
+224dd2a Added itest and scenario to globs
+0398f86 Added FALSE, TRUE, s8, u8, etc
+e9f78d6 Only apply string style to text that other classifiers classified as strings (ditto for comments)
+80a4fea Use $ for eol comments
+3466f58 Added python language
+3ff91a4 Made methods a bit larger
+7c127e3 Renamed time simTime
+bcc72e6 Added keyword2 and type2 elements
+86129a1 Added objective-c
+c173b4f Added C language
+8b3697d Added c-style comments
+47f1c87 Added default.config to test globs
+7015e98 C++ now has *.h as a glob and treats angle bracket expressions as strings (if they are preceded by #include).
+7fc3cc8 Regex glob now uses anchors so that it only matches entire file names
+2a9bdda Made built-in functions keywords
+82a3d3d Language regexen are now compiled
+ff20bb9 Changes to the language files are now live
+df889cc Now installs a language readme
+a16fad9 Styles can now be overridden via a custom Styles.field file
+28f9caf Removed todo language
+9bce958 Custom languages now override standard languages
+fa8f1f1 Language files are now installed into the standard directory
+3955d3a Added language files
+79f826f Added ignore files
+8ae6416 Added sources
+4ef7cb6 First commit

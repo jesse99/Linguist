@@ -2,10 +2,6 @@
 zip -j Linguist-0.3.zip Linguist/README.html Linguist/bin/Debug/Linguist.dll Linguist/bin/Debug/Linguist.vsix Linguist/bin/Debug/extension.vsixmanifest
 
 * Release checklist:
-	- review the readme
-	- build a new readme
-	- use git log --oneline > CHANGE_LOG
-	- update CHANGES file
 	- push changes
 	- upload a new vsix file
 	- create a new branch for the release
