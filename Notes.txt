@@ -1,13 +1,9 @@
 ﻿asciidoc --backend=xhtml11 --out-file=README.html README.asciidoc && open README.html
 zip -j Linguist-0.3.zip Linguist/README.html Linguist/bin/Debug/Linguist.dll Linguist/bin/Debug/Linguist.vsix Linguist/bin/Debug/extension.vsixmanifest
 
-* Highlight TRUE and FALSE.
 * Release checklist:
- 	- test a few different languages
-	- search for TODO (in all files)
-	- update the version in the readme, the assembly, and the manifest
-	- make sure that the language element names listed in the readme are correct
 	- review the readme
+	- build a new readme
 	- use git log --oneline > CHANGE_LOG
 	- update CHANGES file
 	- push changes
@@ -42,11 +38,13 @@ zip -j Linguist-0.3.zip Linguist/README.html Linguist/bin/Debug/Linguist.dll Lin
 	- saving these into a list when they are created and updating them later had no effect
 	- so seems that we would have to somehow tell the editor that the formats have changed
 * Release checklist:
- 	- test a few different languages
 	- search for TODO (in all files)
 	- update the version in the readme, the assembly, and the manifest
 	- make sure that the language element names listed in the readme are correct
+	- install the latest version
+ 	- test a few different languages
 	- review the readme
+	- build a new readme
 	- use git log --oneline > CHANGE_LOG
 	- update CHANGES file
 	- push changes
