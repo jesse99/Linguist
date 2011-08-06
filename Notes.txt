@@ -1,17 +1,6 @@
 ﻿asciidoc --backend=xhtml11 --out-file=README.html README.asciidoc && open README.html
 zip -j Linguist-0.4.zip README.html CHANGES.txt Linguist/bin/Debug/Linguist.vsix
 
-* Release checklist:
-	- upload the zip file to githip
-	- upload the zip file to the visual studio gallery
-	- create a new branch for the release
-		git checkout -b releases/version-0.3
-		git push origin releases/version-0.3
-		git checkout master 
-		git branch -f releases/version-0.3 origin/releases/version-0.3
-		git checkout releases/version-0.3
-	- do a push
-	- email
 
 * Attributes are not always highlighted properly (tho the regex looks right)
 * Add a directory with test files for each language.
@@ -47,12 +36,13 @@ zip -j Linguist-0.4.zip README.html CHANGES.txt Linguist/bin/Debug/Linguist.vsix
 	- push changes
 	- upload the zip file to githip
 	- upload the zip file to the visual studio gallery
+	- do a push
 	- create a new branch for the release
 		git checkout -b releases/version-0.3
 		git push origin releases/version-0.3
 		git checkout master 
 		git branch -f releases/version-0.3 origin/releases/version-0.3
 		git checkout releases/version-0.3
-	- do a push
+		git checkout master
 	- email
 	
