@@ -1,15 +1,16 @@
 ﻿asciidoc --backend=xhtml11 --out-file=README.html README.asciidoc && open README.html
-zip -j Linguist-0.3.zip Linguist/README.html Linguist/bin/Debug/Linguist.dll Linguist/bin/Debug/Linguist.vsix Linguist/bin/Debug/extension.vsixmanifest
+zip -j Linguist-0.4.zip README.html CHANGES.txt Linguist/bin/Debug/Linguist.vsix
 
 * Release checklist:
-	- push changes
-	- upload a new vsix file
+	- upload the zip file to githip
+	- upload the zip file to the visual studio gallery
 	- create a new branch for the release
 		git checkout -b releases/version-0.3
 		git push origin releases/version-0.3
 		git checkout master 
 		git branch -f releases/version-0.3 origin/releases/version-0.3
 		git checkout releases/version-0.3
+	- do a push
 	- email
 
 * Attributes are not always highlighted properly (tho the regex looks right)
@@ -44,12 +45,14 @@ zip -j Linguist-0.3.zip Linguist/README.html Linguist/bin/Debug/Linguist.dll Lin
 	- use git log --oneline > CHANGE_LOG
 	- update CHANGES file
 	- push changes
-	- upload a new vsix file
+	- upload the zip file to githip
+	- upload the zip file to the visual studio gallery
 	- create a new branch for the release
 		git checkout -b releases/version-0.3
 		git push origin releases/version-0.3
 		git checkout master 
 		git branch -f releases/version-0.3 origin/releases/version-0.3
 		git checkout releases/version-0.3
+	- do a push
 	- email
 	
