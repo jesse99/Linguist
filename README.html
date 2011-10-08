@@ -553,7 +553,8 @@ software is distributed under the terms of the MIT.X11 licensing agreement (see 
 <h2 id="_1_operation">1 Operation</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>When the extension starts up for the first time it will create standard and custom directories
-inside <tt>C:\Users\&lt;user name&gt;\AppData\Local\Linguist</tt>. The standard directory will contain the built-in
+inside <tt>%LOCALAPPDATA%\Linguist</tt> or <tt>%USERPROFILE%\AppData\Local\Linguist</tt> (typically this will
+be something like <tt>C:\Users\&lt;user name&gt;\AppData\Local\Linguist</tt>). The standard directory will contain the built-in
 language and style files. The custom directory will be empty. When the extension starts up again
 old or missing files in the standard directory will be added or updated.</p></div>
 <div class="paragraph"><p>Files within the custom directory can be used to define new languages or to override
@@ -699,7 +700,7 @@ to see them).</p></div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2011-10-08 08:00:40 PDT
+Last updated 2011-10-08 08:07:48 PDT
 </div>
 </div>
 </body>

@@ -19,7 +19,8 @@ software is distributed under the terms of the MIT.X11 licensing agreement (see 
 == 1 Operation ==
 
 When the extension starts up for the first time it will create standard and custom directories 
-inside `C:\Users\<user name>\AppData\Local\Linguist`. The standard directory will contain the built-in 
+inside `%LOCALAPPDATA%\Linguist` or `%USERPROFILE%\AppData\Local\Linguist` (typically this will
+be something like `C:\Users\<user name>\AppData\Local\Linguist`). The standard directory will contain the built-in 
 language and style files. The custom directory will be empty. When the extension starts up again
 old or missing files in the standard directory will be added or updated.
 

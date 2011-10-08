@@ -1,8 +1,6 @@
 ﻿asciidoc --backend=xhtml11 --out-file=README.html README.asciidoc && open README.html
 zip -j Linguist-0.4.zip README.html CHANGES.txt Linguist/bin/Debug/Linguist.vsix
 
-* LocalAppData appears to be in either %LOCALAPPDATA% or %USERPROFILE%\AppData\Local
-
 * Attributes are not always highlighted properly (tho the regex looks right)
 * Add a directory with test files for each language.
 * May want to use a weak list to avoid doing a snapshot -> doc -> extension -> language search every time
