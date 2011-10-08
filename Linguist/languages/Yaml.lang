@@ -1,0 +1,6 @@
+﻿Language: yaml
+Globs: *.yaml *.yml
+
+Comment: \x23 .* $
+Emphasis: ^ \s* (?: - \s+)* [\w-]+ (?= \s* :)
+Preprocess: ^ --- \s .*
