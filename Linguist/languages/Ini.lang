@@ -1,5 +1,5 @@
 ﻿Language: ini
 Globs: *.ini
 
-Comment: ; .* $
+Comment: [;#] .* $
 Preprocess: ^ \[ [a-zA-Z] [a-zA-Z0-9_ ]* \]
