@@ -13,7 +13,8 @@ To install the extension close studio and double-click the `Linguist.vsix` file.
 select the Extension Manager... item from Studio's Tool menu, select Linguist, and press the
 Uninstall button. To upgrade the extension uninstall the old version and install the new version.
 
-To check for newer versions of the extension visit https://github.com/jesse99/Linguist[github].
+To check for newer versions of the extension visit https://github.com/jesse99/Linguist[github]. The
+software is distributed under the terms of the MIT.X11 licensing agreement (see Licence.txt).
 
 == 1 Operation ==
 
