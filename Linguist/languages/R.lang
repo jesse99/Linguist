@@ -1,6 +1,6 @@
 ﻿# R (statistics package).
 Language: r
-Globs: *.R
+Globs: *.R *.rs
 
 Comment: \x23 .* $
 Keyword: \b(?: NULL | NA | Inf | NaN | TRUE | FALSE | if | else | repeat | while | function | for | in | next | break)\b
