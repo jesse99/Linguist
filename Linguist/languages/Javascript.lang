@@ -1,0 +1,17 @@
+Language: javascript
+Globs: *.js
+
+Comment: // .* $
+Comment: /\* (?: . | \r | \n)*? \*/
+Keyword: \b(?: break | case | catch | continue | debugger | default | delete | do | else | false | finally | for | function | if | instanceof | in | new | return | switch | this | throw | true | try | typeof | var | void | while | with)\b	
+Keyword2: \b(?: ArrayBuffer | Array | Boolean | Date | Function | Iterator | Number | Object | RegExp | String | Float32Array | Float64Array | Int16Array | Int32Array | Int8Array | Uint16Array | Uint32Array | Uint8Array | Uint8ClampedArray | Error | EvalError | InternalError | RangeError | ReferenceError | StopIteration | SyntaxError | TypeError | URIError)\b 
+Keyword2: \b(?: Infinity | JSON | Math | NaN | undefined)\b 
+Keyword2: \b(?: and | get | let | set | yield)\b 
+Number: (?<= \W) \d+ (?= \W)
+String: " (?: [^"\r\n\\] | \\.)* "
+String: ' (?: [^'\r\n\\] | \\.)* '
+Method: (?<=\b function \s+) [\w$] \w*
+
+
+
+

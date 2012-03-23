@@ -80,6 +80,7 @@
     <EmbeddedResource Include="languages\Asciidoc.lang" />
     <EmbeddedResource Include="languages\C#.lang" />
     <EmbeddedResource Include="languages\C++.lang" />
+    <EmbeddedResource Include="languages\Dot.lang" />
     <EmbeddedResource Include="languages\Field.lang" />
     <EmbeddedResource Include="languages\Makefile.lang" />
     <EmbeddedResource Include="languages\Patch.lang" />
@@ -93,10 +94,11 @@
     <EmbeddedResource Include="languages\Ned.lang" />
     <EmbeddedResource Include="languages\Ini.lang" />
     <EmbeddedResource Include="languages\R.lang" />
-    <EmbeddedResource Include="languages\Dot.lang" />
     <EmbeddedResource Include="languages\Ruby.lang" />
     <EmbeddedResource Include="languages\Yaml.lang" />
     <EmbeddedResource Include="languages\Tex.lang" />
+    <EmbeddedResource Include="languages\Javascript.lang" />
+    <EmbeddedResource Include="languages\Actionscript.lang" />
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
     </None>
