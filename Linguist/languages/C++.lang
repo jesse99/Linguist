@@ -8,6 +8,7 @@ Keyword: \b(?:  asm | bool | catch | class | const_cast | constexpr | decltype |
 Keyword2: \b(?:  check_and_cast | FALSE | list | map | multi_map | multi_set | NULL | set | size_t | std | string | TRUE | vector)\b 
 Keyword2: \b(?:  s8 | s16 | s32 | s64 | u8 | u16 | u32 | u64 | ushort | uint | ulong)\b 
 Number: (?<= \W) \d+ (?= \W)
+Number: (?<= \W) 0x [0-9a-fA-f]+ (?= \W)
 Preprocess: \x23 \s* (?: ifdef | ifndef | if | else | elif | endif)
 Header5: \x23 \s* (?: define | undef | warning | error | line | pragma | include)
 String: " (?: [^"\r\n\\] | \\.)* "

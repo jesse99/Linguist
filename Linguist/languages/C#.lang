@@ -15,6 +15,7 @@ Number: (?<= \W) \. \d+ (?: [eE] [\+-]? \d+)? [FfDdMm]? (?= \W)
 Number: (?<= \W) \d+ [eE] [\+-]? \d+ [FfDdMm]? (?= \W)
 Number: (?<= \W) \d+ [FfDdMm] (?= \W)
 Number: (?<= \W) \d+ (?= \W)
+Number: (?<= \W) 0x [0-9a-fA-f]+ (?= \W)
 Region: \x23region [^\r\n]* [\r\n]
 Region: \x23endregion
 Preprocess: (?: \x23if | \x23else | \x23elif | \x23endif | \x23define | \x23undef | \x23warning | \x23error | \x23line | (?: \x23pragma \s warning) | (?: \x23pragma \s checksum) | \x23pragma) .* $

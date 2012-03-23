@@ -9,6 +9,7 @@ Keyword: \b(?:  __asm__ | __inline__ | __typeof__ | __unix__ | __vax__ | asm | i
 Keyword2: \b(?:  FALSE | TRUE | NULL)\b 
 Keyword2: \b(?:  s8 | s16 | s32 | s64 | u8 | u16 | u32 | u64 | ushort | uint | ulong)\b 
 Number: (?<= \W) \d+ (?= \W)
+Number: (?<= \W) 0x [0-9a-fA-f]+ (?= \W)
 Preprocess: \x23 \s* (?: ifdef | ifndef | if | else | elif | endif)
 Header5: \x23 \s* (?: define | undef | warning | error | line | pragma | include)
 String: " (?: [^"\r\n\\] | \\.)* "
