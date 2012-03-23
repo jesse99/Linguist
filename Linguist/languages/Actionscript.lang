@@ -5,16 +5,12 @@ Comment: // .* $
 Comment: /\* (?: . | \r | \n)*? \*/
 Keyword: \b(?: as | break | case | catch | class | const | continue | default | delete | do | else | extends | false | finally | for | function | if | implements | import | instanceof | in | interface | internal | is | native | new | null | package | private | protected | public | return | super | switch | this | throw | to | true | try | typeof | use | var | void | while | with)\b
 Keyword: \b(?: and | dynamic | each | final | get | include | let | native | namespace | override | set | static | yield)\b 
-Keyword2: \b(?: ArrayBuffer | Array | Boolean | Date | Function | Iterator | Number | Object | RegExp | String | Float32Array | Float64Array | Int16Array | Int32Array | Int8Array | Uint16Array | Uint32Array | Uint8Array | Uint8ClampedArray | Error | EvalError | InternalError | RangeError | ReferenceError | StopIteration | SyntaxError | TypeError | URIError)\b 
+Keyword2: \b(?: ArrayBuffer | Array | Boolean | Date | Function | Iterator | Number | Object | RegExp | String | Float32Array | Float64Array | Int16Array | Int32Array | Int8Array | Uint16Array | Uint32Array | Uint8Array | Uint8ClampedArray | Error | EvalError | InternalError | RangeError | ReferenceError | StopIteration | SyntaxError | TypeError | URIError | XMLList | XML)\b 
 Keyword2: \b(?: Infinity | JSON | Math | NaN | undefined)\b 
+Keyword2: \b(?: int | Null | uint)\b 
 Number: (?<= \W) \d+ (?= \W)
 Number: (?<= \W) 0x [0-9a-fA-f]+ (?= \W)
 String: " (?: [^"\r\n\\] | \\.)* "
 String: ' (?: [^'\r\n\\] | \\.)* '
 Type: (?<=\b class \s+) [\w$] \w*
 Method: (?<=\b function \s+) [\w$] \w*
-
-
-
-
-
