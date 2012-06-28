@@ -1,6 +1,7 @@
 ﻿asciidoc --backend=xhtml11 --out-file=README.html README.asciidoc && open README.html
 zip -j Linguist-0.4.zip README.html CHANGES.txt Linguist/bin/Debug/Linguist.vsix
 
+* ini needs to handle colons in section names (see pyramid ini files)
 * Python needs to highlight with (and maybe int, float, str, etc)
 * Be sure to mention that multi-line regexen don't work so well.
 

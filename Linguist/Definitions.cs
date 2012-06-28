@@ -553,5 +553,82 @@ namespace Linguist
 			{
 			}
 		}
+
+		// ----------------------------------------------------------------
+		[Export]
+		[Name("Linguist.prerequisite")]
+		[BaseDefinition("Linguist")]
+		internal static ClassificationTypeDefinition PrerequisiteDefinition = null;
+
+		[Export(typeof(EditorFormatDefinition))]
+		[ClassificationType(ClassificationTypeNames = "Linguist.prerequisite")]
+		[Name("Linguist.prerequisite")]
+		[UserVisible(true)]
+		[Order(After = Priority.High)]
+		internal sealed class PrerequisiteFormat : BaseFormat
+		{
+			public PrerequisiteFormat()
+
+				: base("prerequisite")
+			{
+			}
+		}
+
+		// ----------------------------------------------------------------
+		[Export]
+		[Name("Linguist.operator")]
+		[BaseDefinition("Linguist")]
+		internal static ClassificationTypeDefinition OperatorDefinition = null;
+
+		[Export(typeof(EditorFormatDefinition))]
+		[ClassificationType(ClassificationTypeNames = "Linguist.operator")]
+		[Name("Linguist.operator")]
+		[UserVisible(true)]
+		[Order(After = Priority.High)]
+		internal sealed class OperatorFormat : BaseFormat
+		{
+			public OperatorFormat()
+				: base("operator")
+			{
+			}
+		}
+
+		// ----------------------------------------------------------------
+		[Export]
+		[Name("Linguist.variable")]
+		[BaseDefinition("Linguist")]
+		internal static ClassificationTypeDefinition VariableDefinition = null;
+
+		[Export(typeof(EditorFormatDefinition))]
+		[ClassificationType(ClassificationTypeNames = "Linguist.variable")]
+		[Name("Linguist.variable")]
+		[UserVisible(true)]
+		[Order(After = Priority.High)]
+		internal sealed class VariableFormat : BaseFormat
+		{
+			public VariableFormat()
+				: base("variable")
+			{
+			}
+		}
+
+		// ----------------------------------------------------------------
+		[Export]
+		[Name("Linguist.variable2")]
+		[BaseDefinition("Linguist")]
+		internal static ClassificationTypeDefinition Variable2Definition = null;
+
+		[Export(typeof(EditorFormatDefinition))]
+		[ClassificationType(ClassificationTypeNames = "Linguist.variable2")]
+		[Name("Linguist.variable2")]
+		[UserVisible(true)]
+		[Order(After = Priority.High)]
+		internal sealed class Variable2Format : BaseFormat
+		{
+			public Variable2Format()
+				: base("variable2")
+			{
+			}
+		}
 	}
 }

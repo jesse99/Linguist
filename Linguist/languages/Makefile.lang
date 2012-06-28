@@ -1,19 +1,29 @@
-# See http://www.opengroup.org/onlinepubs/009695399/utilities/make.html and
-# http://www.gnu.org/software/make/manual/html_node/index.html. Note that these
-# don't define make files very precisely so it's probable that this file isn't
-# quite right.
+# See http://www.opengroup.org/onlinepubs/009695399/utilities/make.html and http://www.gnu.org/software/make/manual/html_node/index.html.
 
 # May want a custom language for automake files.
 Language: makefile
-Globs: Makefile Makefile.am *.make *.mk *.mak makefrag Make.shared
+Globs: *Makefile Makefile.am *.make *.mk *.mak makefrag Make.shared
 
 Comment: \x23 .* $
-Keyword: \b(?: (?<! -)define | endef | export | ifdef | ifndef | ifeq | ifneq | else | endif | include | sinclude | override | export | unexport | VPATH | vpath)\b
-Keyword: \b(?: DEFAULT | IGNORE | POSIX | PRECIOUS | SCCS_GET | SILENT | SUFFIXES)\b
-Keyword: \$\^ | \$@ | \$% | \$\? | \$< | \$\* | \$@D | \$%D | \$\?D | \$<D | \$\*D | \$@F | \$%F | \$\?F | \$<F | \$\*F
+Keyword: \b(?: define | undefine | endef | export | ifdef | ifndef | ifeq | ifneq | else | endif | include | -include | sinclude | override | export | unexport | VPATH | vpath | private)\b
+Keyword: \b(?: \.DEFAULT | \.IGNORE | \.POSIX | \.PRECIOUS | \.SCCS_GET | \.SILENT | \.SUFFIXES | \.SECONDEXPANSION | \.PHONY | \.INTERMEDIATE | \.DELETE_ON_ERROR | \.SILENT | \.ONESHELL | MAKEFILE_LIST | \.DEFAULT_GOAL | MAKE_RESTARTS | \.RECIPEPREFIX | \.VARIABLES | \.INCLUDE_DIRS | MAKE | MAKEFLAGS | OVERRIDES | SHELL)\b
+
 Keyword: (?<= \$\() (?: abspath | addprefix | addsuffix | and | basename | call | dir | error | eval | filter-out | filter | findstring | firstword | flavor | foreach | if | info | join | lastword | notdir | or | origin | patsubst | realpath | shell | sort | strip | subst | suffix | value | warning | wildcard | wordlist | words | word)
 Number: (?<= \W) \d+ (?= \W)
-Target: ^ [-\w\.\(\)%/\\$]+ \s* : (?! =)
+
+#automatic variables
+Variable2: \$\^(?: D|F)? | \$@(?: D|F)? | \$%(?: D|F)? | \$\?(?: D|F)? | \$<(?: D|F)? | \$\*(?: D|F)? | \$\+(?: D|F)? | \$\| 
+# Variable is a word after $(
+Variable: (?<= \$\() [\w-]+\W
+
+#Target is everything before the last : or :: before ';', but not if starts with a tab, and not a Variable as defined above
+# last : as part of := does not count
+Target: ^ [^\t;\:](?: [^;]*[^;\:])? (?= \:[^\=] (?: [^\:] | \:\= )* ;?.* $)
+
+Prerequisite: (?<= :) [^\:\=;][^:;]* $
+
+Operator: [\?\=\:\-\+;\$\(\)\\\@\$]
+
 String: " (?: [^"\r\n\\] | \\. | \\\r | \\\n)* "
 String: ` (?: [^`\r\n\\] | \\. | \\\r | \\\n)* `
 String: ' (?: [^'\r\n\\] | \\. | \\\r | \\\n)* '

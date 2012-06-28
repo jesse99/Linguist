@@ -41,6 +41,10 @@ namespace Linguist
 				ms_elements.Add("Target", registry.GetClassificationType("Linguist.target"));
 				ms_elements.Add("Type", registry.GetClassificationType("Linguist.type"));
 				ms_elements.Add("Type2", registry.GetClassificationType("Linguist.type2"));
+				ms_elements.Add("Prerequisite", registry.GetClassificationType("Linguist.prerequisite"));
+				ms_elements.Add("Variable", registry.GetClassificationType("Linguist.variable"));
+				ms_elements.Add("Variable2", registry.GetClassificationType("Linguist.variable2"));
+				ms_elements.Add("Operator", registry.GetClassificationType("Linguist.operator"));
 
 				DoLoad(null, null);
 

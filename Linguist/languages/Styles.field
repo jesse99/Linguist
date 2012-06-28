@@ -71,12 +71,20 @@ ForeColor: Green
 Name: number
 ForeColor: 122, 100, 40
 
+Name: operator
+FontName: Consolas
+PointSize: 12
+
 Name: oldtext
 ForeColor: Red
 
 Name: preprocess
 ForeColor: 131,13,253
 PointSize: 20
+
+Name: prerequisite
+ForeColor: DarkBlue
+PointSize: 14
 
 Name: region
 ForeColor: 131,13,253
@@ -101,3 +109,16 @@ Bold: true
 
 Name: type2
 PointSize: 18
+
+
+
+
+Name: variable
+ForeColor: Purple
+FontName: Consolas
+PointSize: 12
+
+Name: variable2
+ForeColor: Purple
+FontName: Consolas
+PointSize: 12
