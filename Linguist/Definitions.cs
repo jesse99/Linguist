@@ -73,8 +73,46 @@ namespace Linguist
 		[Order(After = Priority.High)]
 		internal sealed class CommandFormat : BaseFormat
 		{
-			public CommandFormat() 
+			public CommandFormat()
 				: base("command")
+			{
+			}
+		}
+
+		// ----------------------------------------------------------------
+		[Export]
+		[Name("Linguist.command2")]
+		[BaseDefinition("Linguist")]
+		internal static ClassificationTypeDefinition Command2Definition = null;
+
+		[Export(typeof(EditorFormatDefinition))]
+		[ClassificationType(ClassificationTypeNames = "Linguist.command2")]
+		[Name("Linguist.command2")]
+		[UserVisible(true)]
+		[Order(After = Priority.High)]
+		internal sealed class Command2Format : BaseFormat
+		{
+			public Command2Format() 
+				: base("command2")
+			{
+			}
+		}
+
+		// ----------------------------------------------------------------
+		[Export]
+		[Name("Linguist.comment2")]
+		[BaseDefinition("Linguist")]
+		internal static ClassificationTypeDefinition Comment2Definition = null;
+
+		[Export(typeof(EditorFormatDefinition))]
+		[ClassificationType(ClassificationTypeNames = "Linguist.comment2")]
+		[Name("Linguist.comment2")]
+		[UserVisible(true)]
+		[Order(After = Priority.High)]
+		internal sealed class Comment2Format : BaseFormat
+		{
+			public Comment2Format()
+				: base("comment2")
 			{
 			}
 		}

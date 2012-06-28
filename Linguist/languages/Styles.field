@@ -8,7 +8,14 @@ Bold: true
 Name: command
 ForeColor: Blue
 
+Name: command2
+ForeColor: Blue
+
 Name: comment
+ForeColor: 0, 100, 0
+Italic: true
+
+Name: comment2
 ForeColor: 0, 100, 0
 Italic: true
 
@@ -109,9 +116,6 @@ Bold: true
 
 Name: type2
 PointSize: 18
-
-
-
 
 Name: variable
 ForeColor: Purple

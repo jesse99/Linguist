@@ -16,8 +16,10 @@ namespace Linguist
 			{
 				ms_elements.Add("Attribute", registry.GetClassificationType("Linguist.attribute"));
 				ms_elements.Add("Command", registry.GetClassificationType("Linguist.command"));
+				ms_elements.Add("Command2", registry.GetClassificationType("Linguist.command2"));
 				ms_elements.Add("Default", registry.GetClassificationType("Linguist.default"));
 				ms_elements.Add("Comment", registry.GetClassificationType("Linguist.comment"));
+				ms_elements.Add("Comment2", registry.GetClassificationType("Linguist.comment2"));
 				ms_elements.Add("DiffLoc", registry.GetClassificationType("Linguist.diffloc"));
 				ms_elements.Add("Emphasis", registry.GetClassificationType("Linguist.emphasis"));
 				ms_elements.Add("Header1", registry.GetClassificationType("Linguist.header1"));
