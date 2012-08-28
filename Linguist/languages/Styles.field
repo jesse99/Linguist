@@ -30,6 +30,10 @@ PointSize: 12
 Name: emphasis
 Bold: true
 
+Name: header0
+ForeColor: 131,13,253
+PointSize: 24
+
 Name: header1
 ForeColor: 131,13,253
 PointSize: 20

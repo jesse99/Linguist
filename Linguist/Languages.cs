@@ -22,6 +22,7 @@ namespace Linguist
 				ms_elements.Add("Comment2", registry.GetClassificationType("Linguist.comment2"));
 				ms_elements.Add("DiffLoc", registry.GetClassificationType("Linguist.diffloc"));
 				ms_elements.Add("Emphasis", registry.GetClassificationType("Linguist.emphasis"));
+				ms_elements.Add("Header0", registry.GetClassificationType("Linguist.header0"));
 				ms_elements.Add("Header1", registry.GetClassificationType("Linguist.header1"));
 				ms_elements.Add("Header2", registry.GetClassificationType("Linguist.header2"));
 				ms_elements.Add("Header3", registry.GetClassificationType("Linguist.header3"));
@@ -185,7 +186,7 @@ namespace Linguist
 			{
 				if (field.Name != "Language" && field.Name != "Globs")
 					if (!ms_elements.Keys.Contains(field.Name))
-						Log.WriteLine("Ignoring field {0}.", field.Name);
+						Log.WriteLine("Ignoring unused field {0}.", field.Name);
 			}
 		}
 		#endregion

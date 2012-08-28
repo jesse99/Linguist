@@ -195,6 +195,25 @@ namespace Linguist
 
 		// ----------------------------------------------------------------
 		[Export]
+		[Name("Linguist.header0")]
+		[BaseDefinition("Linguist")]
+		internal static ClassificationTypeDefinition Header0Definition = null;
+
+		[Export(typeof(EditorFormatDefinition))]
+		[ClassificationType(ClassificationTypeNames = "Linguist.header0")]
+		[Name("Linguist.header0")]
+		[UserVisible(true)]
+		[Order(After = Priority.High)]
+		internal sealed class Header0Format : BaseFormat
+		{
+			public Header0Format()
+				: base("header0")
+			{
+			}
+		}
+
+		// ----------------------------------------------------------------
+		[Export]
 		[Name("Linguist.header1")]
 		[BaseDefinition("Linguist")]
 		internal static ClassificationTypeDefinition Header1Definition = null;

@@ -2,6 +2,7 @@
 Globs: *.tex *.aux
 
 Comment: (?<! \\) % .* $
+Header0: \\ chapter .* $
 Header1: \\ section .* $
 Header2: \\ subsection .* $
 Header3: \\ subsubsection .* $
